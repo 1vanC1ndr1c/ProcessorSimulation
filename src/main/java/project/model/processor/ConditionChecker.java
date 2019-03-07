@@ -9,4 +9,19 @@ public final class ConditionChecker extends BaseComponent {
     public static ConditionChecker getInstance() {
         return CONDITION_CHECKER;
     }
+
+    public boolean checkAccumulator() {
+        boolean isZero = false;
+
+        String accumulatorValue = Accumulator.getInstance().getValue();
+
+        for (int i = 0; i < accumulatorValue.length(); i++) {
+            if (!(accumulatorValue.charAt(i) == '0')) {
+                isZero = false;
+                return isZero;
+            }
+        }
+        isZero = true;
+        return isZero;
+    }
 }

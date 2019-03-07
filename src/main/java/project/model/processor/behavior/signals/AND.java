@@ -26,7 +26,7 @@ public final class AND extends BaseSignal {
 
         super.printData();
 
-        //check:
+        //checkAccumulator:
         //https://www.rapidtables.com/calc/math/binary-calculator.html
     }
 }

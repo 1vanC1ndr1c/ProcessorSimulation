@@ -32,7 +32,7 @@ public final class AndA implements BaseInstruction {
         EALU.getInstance().signal();
         LA.getInstance().signal();
 
-        //check:
+        //checkAccumulator:
         //https://www.rapidtables.com/calc/math/binary-calculator.html
     }
 }

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01cb1e98-0e6c-479e-94f7-94a3f9b53e84" name="Default Changelist" comment="" />
+    <list default="true" id="01cb1e98-0e6c-479e-94f7-94a3f9b53e84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ivan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ivan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/data/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/data/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/JumpIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/data/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/data/DataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/JumpIf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/ShrA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/ShrA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/logic/HexHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/logic/HexHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/logic/InstructionPicker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/logic/InstructionPicker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/ConditionChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/ConditionChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/Fetch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/Fetch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/ADD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/ADD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/AND.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/AND.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/EA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/EA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/EALU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/signals/EALU.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,27 +70,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="16" />
-          <entry key="java" value="7980" />
+          <entry key="dummy" value="20" />
+          <entry key="java" value="8642" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7980" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="JAVA" value="8642" />
+          <entry key="PLAIN_TEXT" value="20" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="290" />
+          <entry key="java" value="317" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="290" />
+          <entry key="JAVA" value="317" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -75,10 +99,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" selection-end-line="29" />
+            <state relative-caret-position="459">
+              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +136,12 @@
       <find>s</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/project/Instructions/Store.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/memory/Memory.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/MemoryAdressRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/GeneralRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/logic/InstructionDecoder.java" />
@@ -121,11 +158,9 @@
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/MemoryAddressRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/InstructionRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ControlUnit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/Accumulator.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ALU.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/InternalBus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EMDR.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/INC.java" />
@@ -133,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LALU.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LIR.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMAR.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMDR.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/READ.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java" />
@@ -141,19 +175,24 @@
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/LoadA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/WRITE.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/StoreA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/data/DataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMDR.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LPC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/data/DataLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
       </list>
     </option>
   </component>
@@ -170,11 +209,14 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="136" />
-    <option name="y" value="70" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="263" />
+    <option name="y" value="-18" />
     <option name="width" value="854" />
     <option name="height" value="1023" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -313,7 +355,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551987231701" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551989287677" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -398,18 +440,18 @@
       <workItem from="1551729308730" duration="1958000" />
       <workItem from="1551785882696" duration="12773000" />
       <workItem from="1551967031291" duration="3204000" />
-      <workItem from="1551983486058" duration="3578000" />
+      <workItem from="1551983486058" duration="5722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26180000" />
+    <option name="totallyTimeSpent" value="28324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20904645" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20904645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -417,8 +459,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.038116593" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.27578476" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -478,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/MemoryAddressRegister.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -538,26 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -568,47 +583,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LALU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LIR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/Jump.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="5" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/JumpIf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/INC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,30 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/READ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AndA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" selection-start-line="34" selection-end-line="35" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -686,23 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMDR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/memory/Memory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -717,13 +658,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/WRITE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -748,16 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EMDR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/StA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -768,30 +692,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/INC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LALU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LIR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMDR.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/WRITE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/ConditionChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EMDR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/data/DataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -805,45 +877,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AndA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="4" column="71" lean-forward="true" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
-          <folding>
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/data/DataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="544">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-end-line="29" />
+        <state relative-caret-position="416">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

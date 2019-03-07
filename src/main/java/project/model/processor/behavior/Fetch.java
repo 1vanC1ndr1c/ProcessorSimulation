@@ -57,8 +57,15 @@ public final class Fetch<T extends BaseInstruction> {
             case "3": //anda.opcode = HEX(3)
                 decodedInstruction = (T) AndA.getInstance();
                 break;
-            case "4": //anda.opcode = HEX(3)
+            case "4": //anda.opcode = HEX(4)
                 decodedInstruction = (T) StA.getInstance();
+                break;
+            case "5": //shra.opcode = HEX(5)
+                decodedInstruction = (T) ShrA.getInstance();
+                break;
+            case "6": //jmpz.opcode = HEX(6)
+                decodedInstruction = (T) JmpZ.getInstance();
+                decodedInstruction = (T) JmpZ.getInstance();
                 break;
             default:
                 System.out.println("no!");

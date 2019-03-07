@@ -58,6 +58,14 @@ public class DataLoader {
         locationAndContent.put("000503", "00");// sta
         //==================================================================
 
+        //Load into memory =================================================
+        locationAndContent.put("000600", "60000662");// *****jmpz $000662 **
+        locationAndContent.put("000601", "00");
+        locationAndContent.put("000602", "00");
+        locationAndContent.put("000603", "00");
+        locationAndContent.put("000662", "11111111");
+        //==================================================================
+
 
         Memory.getInstance().setLocationAndContent(locationAndContent);
     }
