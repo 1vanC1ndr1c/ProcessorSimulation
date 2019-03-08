@@ -5,10 +5,10 @@ import project.model.processor.ProgramCounter;
 
 public final class LPC extends BaseSignal {
 
-    private static final LPC EPC = new LPC();
+    private static final LPC LPC = new LPC();
 
     public static LPC getInstance() {
-        return EPC;
+        return LPC;
     }
 
     @Override

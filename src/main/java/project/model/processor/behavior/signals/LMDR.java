@@ -20,8 +20,7 @@ public class LMDR extends BaseSignal {
         } else {
             MemoryDataRegister.getInstance().setValue(InternalBus.getInstance().getValue());
         }
-        //fail safe
-        source = "bus";
+        source = "bus";      //fail safe
 
         super.printData();
     }
@@ -29,6 +28,8 @@ public class LMDR extends BaseSignal {
     public void setSource(String source) {
         if (source.equals("data") || source.equals("bus")) {
             this.source = source;
-        } else throw new IllegalArgumentException("Source can only be 'data' or 'bus'");
+        } else {
+            throw new IllegalArgumentException("Source can only be 'data' or 'bus'");
+        }
     }
 }

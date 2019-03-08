@@ -5,10 +5,10 @@ import project.model.processor.TemporaryRegister;
 
 public final class EALU extends BaseSignal {
 
-    private static final EALU INC = new EALU();
+    private static final EALU EALU = new EALU();
 
     public static EALU getInstance() {
-        return INC;
+        return EALU;
     }
 
     @Override

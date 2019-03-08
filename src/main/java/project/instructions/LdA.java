@@ -6,10 +6,10 @@ import project.model.processor.behavior.signals.*;
 @Data
 public class LdA implements BaseInstruction {
 
-    private static final LdA LOAD_A = new LdA();
+    private static final LdA LD_A = new LdA();
 
     public static LdA getInstance() {
-        return LOAD_A;
+        return LD_A;
     }
 
     @Override

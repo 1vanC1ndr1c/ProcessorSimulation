@@ -65,10 +65,17 @@ public final class Fetch<T extends BaseInstruction> {
                 break;
             case "6": //jmpz.opcode = HEX(6)
                 decodedInstruction = (T) JmpZ.getInstance();
-                decodedInstruction = (T) JmpZ.getInstance();
+                break;
+            case "7": //jmp.opcode = HEX(7)
+                decodedInstruction = (T) Jmp.getInstance();
+                break;
+            case "8": //coma.opcode = HEX(8)
+                decodedInstruction = (T) ComA.getInstance();
                 break;
             default:
-                System.out.println("no!");
+                System.out.println("            ***Cannot Decode!***");
+                System.out.println("            ========================================");
+                break;
         }
     }
 }

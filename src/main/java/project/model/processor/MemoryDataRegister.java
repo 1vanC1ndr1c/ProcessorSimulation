@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public final class MemoryDataRegister extends BaseComponent {
+
     private static final MemoryDataRegister MEMORY_DATA_REGISTER = new MemoryDataRegister();
 
     public static MemoryDataRegister getInstance() {

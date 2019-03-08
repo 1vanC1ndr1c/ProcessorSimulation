@@ -22,12 +22,19 @@ public class InstructionPicker {
             case "sta": //sta.opcode = HEX(4)
                 Accumulator.getInstance().setValue("22222222");
                 ProgramCounter.getInstance().setValue("000400");//sta
+                break;
             case "shra": //shra.opcode = HEX(5)
                 Accumulator.getInstance().setValue("00132132");
                 ProgramCounter.getInstance().setValue("000500");//shra
                 break;
             case "jmpz": //jmpz.opcode = HEX(6)
                 ProgramCounter.getInstance().setValue("000600");//jmpz
+                break;
+            case "jmp": //jmp.opcode = HEX(7)
+                ProgramCounter.getInstance().setValue("000700");//jmp
+                break;
+            case "coma": //com.opcode = HEX(8)
+                ProgramCounter.getInstance().setValue("000800");//jmp
                 break;
             default:
                 ProgramCounter.getInstance().setValue("000100");//adda

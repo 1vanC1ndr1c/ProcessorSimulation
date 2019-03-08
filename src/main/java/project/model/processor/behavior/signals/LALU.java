@@ -5,10 +5,10 @@ import project.model.processor.TemporaryRegister;
 
 public final class LALU extends BaseSignal {
 
-    private static final LALU INC = new LALU();
+    private static final LALU LALU = new LALU();
 
     public static LALU getInstance() {
-        return INC;
+        return LALU;
     }
 
     @Override

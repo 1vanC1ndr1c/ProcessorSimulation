@@ -1,6 +1,7 @@
 package project.model.processor.behavior.signals;
 
 import project.logic.HexHandler;
+import project.model.processor.ALU;
 import project.model.processor.Accumulator;
 import project.model.processor.InternalBus;
 
@@ -12,7 +13,6 @@ public final class ADD extends BaseSignal {
         return INC;
     }
 
-
     //Add the 'Q' (which is a line from intBus)
     // with 'P' (which is a line from the accumulator).
     @Override
@@ -22,7 +22,7 @@ public final class ADD extends BaseSignal {
 
         String result = HexHandler.addNumbers(intBus, accumulator);
 
-        Accumulator.getInstance().setValue(result);
+        ALU.getInstance().setValue(result);
 
         super.printData();
     }

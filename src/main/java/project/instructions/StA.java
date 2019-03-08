@@ -6,10 +6,10 @@ import project.model.processor.behavior.signals.*;
 @Data
 public class StA implements BaseInstruction {
 
-    private static final StA STORE_A = new StA();
+    private static final StA ST_A = new StA();
 
     public static StA getInstance() {
-        return STORE_A;
+        return ST_A;
     }
 
 

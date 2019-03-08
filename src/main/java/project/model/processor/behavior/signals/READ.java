@@ -6,6 +6,7 @@ import project.model.processor.MemoryAddressRegister;
 
 @Data
 public class READ extends BaseSignal {
+
     public String MemoryContentFromMAR;
 
     private static final READ READ = new READ();

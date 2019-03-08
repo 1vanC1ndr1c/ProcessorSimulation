@@ -8,6 +8,7 @@ import project.model.processor.behavior.Fetch;
 
 @Data
 public class ControlUnit extends BaseComponent {
+
     private static final ControlUnit CONTROL_UNIT = new ControlUnit();
 
     public static ControlUnit getInstance() {

@@ -9,10 +9,10 @@ import project.model.processor.MemoryDataRegister;
 public class WRITE extends BaseSignal {
     public String MemoryContentFromMAR;
 
-    private static final WRITE READ = new WRITE();
+    private static final WRITE WRITE = new WRITE();
 
     public static WRITE getInstance() {
-        return READ;
+        return WRITE;
     }
 
     @Override

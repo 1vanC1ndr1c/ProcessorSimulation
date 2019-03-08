@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public final class Execute {
 
-
     private static final Execute EXECUTE = new Execute();
 
     public static Execute getInstance() {
@@ -17,6 +16,4 @@ public final class Execute {
         Fetch.getInstance().getDecodedInstruction().execute();
         System.out.println("END EXECUTE:========================================");
     }
-
-
 }

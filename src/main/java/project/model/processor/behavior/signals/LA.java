@@ -5,10 +5,10 @@ import project.model.processor.InternalBus;
 
 public final class LA extends BaseSignal {
 
-    private static final LA INC = new LA();
+    private static final LA LA = new LA();
 
     public static LA getInstance() {
-        return INC;
+        return LA;
     }
 
     @Override

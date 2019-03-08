@@ -1,23 +1,19 @@
 package project.data;
 
-
 import lombok.Data;
 import project.model.memory.Memory;
-import project.model.processor.Accumulator;
-import project.model.processor.ProgramCounter;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Data
-public class DataLoader {
+public class MemoryLoader {
 
     public static void loadData() {
+        Map<String, String> locationAndContent = new LinkedHashMap<>();
+
         //everything is in hex!
         //opcode is first 4 bits = 1st digit
-
-        Map<String, String> locationAndContent = new LinkedHashMap<>();
 
         //Load into memory =================================================
         locationAndContent.put("000100", "10000103");// *****adda $000103***
@@ -64,6 +60,24 @@ public class DataLoader {
         locationAndContent.put("000602", "00");
         locationAndContent.put("000603", "00");
         locationAndContent.put("000662", "11111111");
+        //==================================================================
+
+
+        //Load into memory =================================================
+        locationAndContent.put("000700", "70000762");// *****jmp $000662 ***
+        locationAndContent.put("000701", "00");
+        locationAndContent.put("000702", "00");
+        locationAndContent.put("000703", "00");
+        locationAndContent.put("000762", "42424242");
+        //==================================================================
+
+
+        //Load into memory =================================================
+        locationAndContent.put("000800", "80000000");// *****coma **********
+        locationAndContent.put("000801", "00");
+        locationAndContent.put("000802", "00");
+        locationAndContent.put("000803", "00");
+        locationAndContent.put("000862", "11211212");
         //==================================================================
 
 

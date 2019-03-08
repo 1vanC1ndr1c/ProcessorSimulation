@@ -1,23 +1,24 @@
 package project.model.processor.behavior.signals;
 
 import project.logic.HexHandler;
+import project.model.processor.ALU;
 import project.model.processor.Accumulator;
 
-public final class SHR extends BaseSignal {
+public final class COM extends BaseSignal {
 
-    private static final SHR INC = new SHR();
+    private static final COM COM = new COM();
 
-    public static SHR getInstance() {
-        return INC;
+    public static COM getInstance() {
+        return COM;
     }
 
     @Override
     public void signal() {
         String accumulator = Accumulator.getInstance().getValue();
 
-        String result = HexHandler.shift(accumulator);
+        String result = HexHandler.complement(accumulator);
 
-        Accumulator.getInstance().setValue(result);
+        ALU.getInstance().setValue(result);
 
         super.printData();
 

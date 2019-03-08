@@ -15,9 +15,7 @@ public class ShrA implements BaseInstruction {
 
     @Override
     public void execute() {
-
         //1. A <- shr(A)
         SHR.getInstance().signal();
-
     }
 }
