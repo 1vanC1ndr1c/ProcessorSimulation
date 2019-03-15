@@ -6,6 +6,8 @@ import project.model.processor.behavior.signals.*;
 @Data
 public class LdA implements BaseInstruction {
 
+    Integer noOfCycles = 12;
+
     private static final LdA LD_A = new LdA();
 
     public static LdA getInstance() {

@@ -7,6 +7,8 @@ import project.model.processor.behavior.signals.LPC;
 @Data
 public final class Jmp implements BaseInstruction {
 
+    Integer noOfCycles = 8;
+
     private static final Jmp JMP = new Jmp();
 
     public static Jmp getInstance() {

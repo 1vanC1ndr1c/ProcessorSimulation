@@ -6,6 +6,8 @@ import project.output.OutputHandler;
 @Data
 public abstract class BaseSignal {
 
+    Integer noOfCycles = 0;
+
     public  abstract void signal();
 
     public void printData(){

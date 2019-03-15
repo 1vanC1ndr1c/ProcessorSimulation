@@ -5,6 +5,8 @@ import project.model.processor.ProgramCounter;
 
 public final class EPC extends BaseSignal {
 
+    Integer noOfCycles = 2;
+
     private static final EPC EPC = new EPC();
 
     public static EPC getInstance() {

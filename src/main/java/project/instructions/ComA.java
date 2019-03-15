@@ -9,6 +9,8 @@ import project.model.processor.behavior.signals.LALU;
 @Data
 public class ComA implements BaseInstruction {
 
+    Integer noOfCycles = 10;
+
     private static final ComA COM_A = new ComA();
 
     public static ComA getInstance() {

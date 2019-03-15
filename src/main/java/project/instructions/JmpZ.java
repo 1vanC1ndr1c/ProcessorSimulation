@@ -8,6 +8,8 @@ import project.model.processor.behavior.signals.LPC;
 @Data
 public class JmpZ implements BaseInstruction {
 
+    Integer noOfCycles = 9;
+
     private static final JmpZ JMP_Z = new JmpZ();
 
     public static JmpZ getInstance() {

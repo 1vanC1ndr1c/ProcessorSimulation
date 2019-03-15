@@ -5,6 +5,8 @@ import project.model.processor.MemoryDataRegister;
 
 public class LMDR extends BaseSignal {
 
+    Integer noOfCycles = 1;
+
     String source = "bus";
 
     private static final LMDR LMDR = new LMDR();

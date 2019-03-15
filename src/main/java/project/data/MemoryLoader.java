@@ -6,7 +6,6 @@ import project.model.memory.Memory;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-
 @Data
 public class MemoryLoader {
 
@@ -32,41 +31,41 @@ public class MemoryLoader {
         }
 
         //Load into memory =================================================
-        locationAndContent.put("000001", "10000003");// *****adda $000003***
-        locationAndContent.put("000003", "00000023");// adda 23
+        locationAndContent.put("000021", "10000003");// *****adda $000003***
+        locationAndContent.put("000023", "00000023");// adda 23
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("000005", "20000007");// *****lda $000203***
-        locationAndContent.put("000007", "00000044");// lda 44
+        locationAndContent.put("000025", "20000007");// *****lda $000203***
+        locationAndContent.put("000027", "00000044");// lda 44
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("000009", "3000000b");// *****anda $000303***
-        locationAndContent.put("00000b", "12345678");// anda 42
+        locationAndContent.put("000029", "3000000b");// *****anda $000303***
+        locationAndContent.put("00002b", "12345678");// anda 42
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("00000d", "4000000f");// *****sta $000403****
-        locationAndContent.put("00000f", "AAAAAAAA");// sta
+        locationAndContent.put("00002d", "4000000f");// *****sta $000403****
+        locationAndContent.put("00002f", "AAAAAAAA");// sta
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("000012", "50000000");// *****shr ***********
+        locationAndContent.put("000032", "50000000");// *****shr ***********
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("000014", "60000016");// *****jmpz $000662 **
-        locationAndContent.put("000016", "11111111");
+        locationAndContent.put("000034", "60000016");// *****jmpz $000662 **
+        locationAndContent.put("000036", "11111111");
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("000018", "7000001a");// *****jmp $000662 ***
-        locationAndContent.put("00001a", "42424242");
+        locationAndContent.put("000038", "7000001a");// *****jmp $000662 ***
+        locationAndContent.put("00003a", "42424242");
         //==================================================================
 
         //Load into memory =================================================
-        locationAndContent.put("00001c", "80000000");// *****coma **********
+        locationAndContent.put("00003c", "80000000");// *****coma **********
         //==================================================================
 
         Memory.getInstance().setLocationAndContent(locationAndContent);

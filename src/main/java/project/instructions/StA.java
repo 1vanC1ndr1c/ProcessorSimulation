@@ -6,6 +6,8 @@ import project.model.processor.behavior.signals.*;
 @Data
 public class StA implements BaseInstruction {
 
+    Integer noOfCycles = 13;
+
     private static final StA ST_A = new StA();
 
     public static StA getInstance() {

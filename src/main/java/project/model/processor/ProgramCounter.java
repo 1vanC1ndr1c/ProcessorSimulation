@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ProgramCounter extends BaseComponent {
 
-    private String value = "00000000";
+    private String value = "000000";
 
     private static final ProgramCounter PROGRAM_COUNTER = new ProgramCounter();
 

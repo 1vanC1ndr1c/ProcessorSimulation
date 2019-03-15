@@ -7,6 +7,8 @@ import project.model.processor.behavior.signals.SHR;
 @Data
 public class ShrA implements BaseInstruction {
 
+    Integer noOfCycles = 8;
+
     private static final ShrA SHR_A = new ShrA();
 
     public static ShrA getInstance() {

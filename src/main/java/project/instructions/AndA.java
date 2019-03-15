@@ -6,6 +6,8 @@ import project.model.processor.behavior.signals.*;
 @Data
 public final class AndA implements BaseInstruction {
 
+    Integer noOfCycles = 0;
+
     private static final AndA AND_A = new AndA();
 
     public static AndA getInstance() {
