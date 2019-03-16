@@ -1,7 +1,6 @@
-package project.gui.Validation;
+package project.gui.validation;
 
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -23,6 +22,7 @@ public class Validator {
         }
         //clear the old data
         gridPane.getChildren().clear();
+
         //set the new valid data into gui
         int i = 0;
         for (Map.Entry<String, String> entry : Memory.getInstance().getLocationAndContent().entrySet()) {
@@ -34,83 +34,68 @@ public class Validator {
 
     public static void validateAndSetProcessorComponentsData(GridPane gridPane) {
 
-        String accValue = "";            //acc = row 0
-        String aluValue = "";            //alu = row 1
-        String irValue = "";             //ir = row 2
-        String intBusValue = "";         //intBus = row 3
-        String marValue = "";            //mar = row 4
-        String mdrValue = "";            //mdr = row 5
-        String pcValue = "";             //pc = row 6
-        String trValue = "";             //tr = row 7
-
         //search the gridpane for textfields
         for (Node node : gridPane.getChildren()) {
             if (node.getClass().isInstance(new TextField())) {
                 TextField textfield = (TextField) node;
                 String value = textfield.getText();
                 int rowIndex = GridPane.getRowIndex(node);
+                //validate the data
                 switch (rowIndex) {
                     case 0:
-                        accValue = value;
+                        if (value.length() == 8 || value.length() == 6)
+                            Accumulator.getInstance().setValue(value);
                         break;
                     case 1:
-                        aluValue = value;
+                        if (value.length() == 8 || value.length() == 6)
+                            ALU.getInstance().setValue(value);
                         break;
                     case 2:
-                        irValue = value;
+                        if (value.length() == 1)
+                            InstructionRegister.getInstance().setValue(value);
                         break;
                     case 3:
-                        intBusValue = value;
+                        if (value.length() == 8 || value.length() == 6 || value.length() == 1)
+                            InternalBus.getInstance().setValue(value);
                         break;
                     case 4:
-                        marValue = value;
+                        if (value.length() == 6)
+                            MemoryAddressRegister.getInstance().setValue(value);
                         break;
                     case 5:
-                        mdrValue = value;
+                        if (value.length() == 8 || value.length() == 6 || value.length() == 1)
+                            MemoryDataRegister.getInstance().setValue(value);
                         break;
                     case 6:
-                        pcValue = value;
+                        if (value.length() == 6)
+                            ProgramCounter.getInstance().setValue(value);
                         break;
                     case 7:
-                        trValue = value;
+                        if (value.length() == 8 || value.length() == 6)
+                            TemporaryRegister.getInstance().setValue(value);
                         break;
                 }
             }
         }
-        if (accValue.length() == 8 || accValue.length() == 6) {
-            Accumulator.getInstance().setValue(accValue);
-        }
-        if (aluValue.length() == 8 || accValue.length() == 6) {
-            ALU.getInstance().setValue(aluValue);
-        }
-        if (intBusValue.length() == 8 || intBusValue.length() == 6 || intBusValue.length() == 1) {
-            InternalBus.getInstance().setValue(intBusValue);
-        }
-        if (irValue.length() == 1) {
-            InstructionRegister.getInstance().setValue(irValue);
-        }
-        if (marValue.length() == 6) {
-            MemoryAddressRegister.getInstance().setValue(marValue);
-        }
-        if (mdrValue.length() == 8 || mdrValue.length() == 6 || mdrValue.length() == 1) {
-            MemoryDataRegister.getInstance().setValue(mdrValue);
-        }
-        if (pcValue.length() == 6) {
-            ProgramCounter.getInstance().setValue(pcValue);
-        }
-        if (trValue.length() == 8 || trValue.length() == 6) {
-            TemporaryRegister.getInstance().setValue(trValue);
-        }
+        //redraw the component values
         gridPane.getChildren().clear();
         UpperRightSide.loadComponents(gridPane);
     }
 
 
     public static boolean validateInstructionLocation(GridPane gridPane) {
+        //check text fields for memory location values
+        //location needs to be a six digit string
+        //if it isn't, reset it to "000000"
+        //if there is no such memory location, reset to default value
         for (Node node : gridPane.getChildren()) {
             if (node.getClass().isInstance(new TextField())) {
                 TextField textField = (TextField) node;
                 if (textField.getLength() != 6) {
+                    gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
+                    return false;
+                }
+                if (!Memory.getInstance().getLocationAndContent().containsKey(textField.getText())) {
                     gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
                     return false;
                 }

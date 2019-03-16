@@ -3,8 +3,6 @@ package project;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import project.data.MemoryLoader;
 
@@ -13,10 +11,6 @@ import project.gui.leftSide.LeftSide;
 import project.gui.middle.Middle;
 import project.gui.rightSide.RightSide;
 import project.gui.top.Top;
-import project.logic.InstructionPicker;
-import project.model.processor.Accumulator;
-import project.model.processor.ControlUnit;
-import project.output.OutputHandler;
 
 public class Processor extends Application {
     public static void main(String[] args) {

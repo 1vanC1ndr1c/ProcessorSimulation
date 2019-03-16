@@ -6,6 +6,8 @@ import project.model.processor.Accumulator;
 
 public final class COM extends BaseSignal {
 
+    Integer noOfCycles = 1;
+
     private static final COM COM = new COM();
 
     public static COM getInstance() {

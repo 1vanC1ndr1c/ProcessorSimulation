@@ -5,6 +5,9 @@ import project.model.processor.InternalBus;
 
 public final class LA extends BaseSignal {
 
+    Integer noOfCycles = 1;
+
+
     private static final LA LA = new LA();
 
     public static LA getInstance() {

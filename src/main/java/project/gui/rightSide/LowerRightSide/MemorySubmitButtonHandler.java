@@ -4,7 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import project.gui.Validation.Validator;
+import project.gui.validation.Validator;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

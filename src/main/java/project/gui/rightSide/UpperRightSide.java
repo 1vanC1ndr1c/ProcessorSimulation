@@ -8,7 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import project.gui.Validation.Validator;
+import project.gui.validation.Validator;
 import project.model.processor.*;
 
 public class UpperRightSide {

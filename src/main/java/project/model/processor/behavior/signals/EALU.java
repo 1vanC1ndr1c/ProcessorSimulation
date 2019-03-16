@@ -5,6 +5,8 @@ import project.model.processor.TemporaryRegister;
 
 public final class EALU extends BaseSignal {
 
+    Integer noOfCycles = 2;
+
     private static final EALU EALU = new EALU();
 
     public static EALU getInstance() {

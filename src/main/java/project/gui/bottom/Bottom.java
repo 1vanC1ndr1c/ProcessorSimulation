@@ -6,11 +6,12 @@ import javafx.scene.text.Text;
 
 public class Bottom {
 
+    //TODO
+
     public static void set(BorderPane borderPane) {
         //bottom
 
         HBox bottomBox = new HBox();
-
 
 
         Text bottom = new Text("bottom");

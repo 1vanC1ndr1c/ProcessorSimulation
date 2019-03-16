@@ -16,7 +16,8 @@ public class MemoryLoader {
 
         Map<String, String> locationAndContent = new LinkedHashMap<>();
 
-        //first, fill the first 1000(16) locations with "00000000"
+        //create empty memory
+        //fill the first 100(16) locations with "00000000"
         String hexKey = "000000";
         String maxLimit = "000100";
         Integer intMaxLimit = Integer.parseInt(maxLimit, 16);
@@ -25,6 +26,9 @@ public class MemoryLoader {
             Integer hexKeyIntValue = Integer.parseInt(hexKey, 16);
             hexKeyIntValue++;
             hexKey = Integer.toHexString(hexKeyIntValue);
+            //when incrementing a number "0000x", the saved value will be "x + 1"
+            //without the zeroes,
+            //so put zeros in front of the number
             for (int j = 0; hexKey.length() < 6; j++) {
                 hexKey = "0" + hexKey;
             }

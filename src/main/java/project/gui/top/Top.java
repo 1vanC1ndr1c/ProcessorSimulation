@@ -4,9 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import project.gui.Validation.Validator;
-import project.gui.rightSide.LowerRightSide.LowerRightSide;
-import project.gui.rightSide.LowerRightSide.MemorySubmitButtonHandler;
+import project.gui.validation.Validator;
 import project.gui.rightSide.UpperRightSide;
 import project.model.memory.Memory;
 

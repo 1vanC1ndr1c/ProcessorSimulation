@@ -5,6 +5,8 @@ import project.model.processor.InternalBus;
 
 public final class EA extends BaseSignal {
 
+    Integer noOfCycles = 2;
+
     private static final EA EPC = new EA();
 
     public static EA getInstance() {
@@ -16,5 +18,7 @@ public final class EA extends BaseSignal {
         InternalBus.getInstance().setValue(Accumulator.getInstance().getValue());
 
         super.printData();
+
+
     }
 }
