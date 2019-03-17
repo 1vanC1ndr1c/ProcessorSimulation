@@ -13,6 +13,4 @@ public abstract class BaseSignal {
     public void printData(){
         OutputHandler.processorOut(getClass().getSimpleName(), 2);
     }
-
-
 }

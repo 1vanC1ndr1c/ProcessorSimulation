@@ -30,7 +30,6 @@ public class LowerRightSide {
         memoryGridPane.setPrefWidth(150);
         memoryGridPane.setPadding(new Insets(0, 0, 0, 5));
 
-
         //titles of the lower box
         Text memoryHeader = new Text(" Memory");
         Text table = new Text(" Location        Content");
@@ -46,7 +45,6 @@ public class LowerRightSide {
         //add a scroll pane to the memory grid
         ScrollPane scrollPane = new ScrollPane(memoryGridPane);
         scrollPane.setFitToHeight(true);
-
 
         //submit button
         Button submitButton = new Button("Submit");

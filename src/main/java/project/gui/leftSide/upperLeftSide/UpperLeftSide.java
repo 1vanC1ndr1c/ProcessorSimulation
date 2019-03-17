@@ -18,7 +18,6 @@ public class UpperLeftSide {
         Text leftText = new Text("Instructions       Location ");
         upperLeftSideBox.getChildren().add(leftText);
 
-
         GridPane instructionsGridPane = new GridPane();
         instructionsGridPane.setHgap(40);
 

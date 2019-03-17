@@ -1,6 +1,7 @@
 package project.model.processor.behavior;
 
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
 
 @Data
 public final class Execute {
@@ -12,8 +13,8 @@ public final class Execute {
     }
 
     public static void execute() {
-        System.out.println("EXECUTE PHASE:======================================");
-        Fetch.getInstance().getDecodedInstruction().execute();
-        System.out.println("END EXECUTE:========================================");
+        if (CycleHandler.getInstance().getCurrentCycle() == 8)
+            System.out.println("EXECUTE PHASE:======================================");
+        if (CycleHandler.getInstance().getCurrentCycle() >= 8) Fetch.getInstance().getDecodedInstruction().execute();
     }
 }

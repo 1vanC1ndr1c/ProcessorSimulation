@@ -18,7 +18,5 @@ public final class EA extends BaseSignal {
         InternalBus.getInstance().setValue(Accumulator.getInstance().getValue());
 
         super.printData();
-
-
     }
 }

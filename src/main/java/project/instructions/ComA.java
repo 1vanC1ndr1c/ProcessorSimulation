@@ -1,6 +1,7 @@
 package project.instructions;
 
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
 import project.model.processor.behavior.signals.COM;
 import project.model.processor.behavior.signals.EALU;
 import project.model.processor.behavior.signals.LA;
@@ -20,9 +21,12 @@ public class ComA implements BaseInstruction {
     @Override
     public void execute() {
         //1. A <- not A
-        COM.getInstance().signal();
-        LALU.getInstance().signal();
-        EALU.getInstance().signal();
-        LA.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) COM.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) LALU.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) EALU.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 10) LA.getInstance().signal();
+
+        //end of instruction
+        if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
     }
 }

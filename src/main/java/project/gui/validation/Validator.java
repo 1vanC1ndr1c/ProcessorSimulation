@@ -82,7 +82,6 @@ public class Validator {
         UpperRightSide.loadComponents(gridPane);
     }
 
-
     public static boolean validateInstructionLocation(GridPane gridPane) {
         //check text fields for memory location values
         //location needs to be a six digit string

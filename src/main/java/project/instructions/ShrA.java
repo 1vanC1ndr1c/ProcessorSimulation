@@ -2,6 +2,7 @@ package project.instructions;
 
 
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
 import project.model.processor.behavior.signals.SHR;
 
 @Data
@@ -18,6 +19,9 @@ public class ShrA implements BaseInstruction {
     @Override
     public void execute() {
         //1. A <- shr(A)
-        SHR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) SHR.getInstance().signal();
+
+        //end of instruction
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) CycleHandler.getInstance().setCurrentCycle(8);
     }
 }

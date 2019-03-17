@@ -1,13 +1,17 @@
 package project.model.processor.behavior;
 
+
+import javafx.scene.control.Button;
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
+import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.instructions.*;
 import project.model.processor.*;
 import project.model.processor.behavior.signals.*;
 import project.output.OutputHandler;
 
 @Data
-public final class Fetch<T extends BaseInstruction> {
+public final class Fetch<T extends BaseInstruction> extends Thread {
 
     private T decodedInstruction;
 
@@ -17,27 +21,34 @@ public final class Fetch<T extends BaseInstruction> {
         return FETCH;
     }
 
+
     public void fetch() {
-        OutputHandler.processorOut("Before first fetch", 0);
-        System.out.println("FETCH PHASE:========================================");
+
+        if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
+        if (CycleHandler.getInstance().getCurrentCycle() == 1)
+            System.out.println("FETCH PHASE:========================================");
+
         //1. MAR <- PC
-        EPC.getInstance().signal();
-        LMAR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 1) EPC.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 2) LMAR.getInstance().signal();
 
         //2. MDR <- M[MAR], read
-        READ.getInstance().signal();
-        LMDR.getInstance().setSource("data");                   //LMDR can be MDR <- IntBus or in this case MDR <- Data
-        LMDR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 3) READ.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 4)
+            LMDR.getInstance().setSource("data");                   //LMDR can be MDR <- IntBus or in this case MDR <- Data
+        if (CycleHandler.getInstance().getCurrentCycle() == 4) LMDR.getInstance().signal();
 
         //3. PC++, IR <- MDR{31:28}
-        INC.getInstance().signal();
-        EMDR.getInstance().sendSubstring("opcode");
-        EMDR.getInstance().signal();
-        LIR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) INC.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) EMDR.getInstance().sendSubstring("opcode");
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) EMDR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 6) LIR.getInstance().signal();
 
         //4. decode
-        decodeInstruction(InstructionRegister.getInstance().getValue());
-        System.out.println("END FETCH ==========================================");
+        if (CycleHandler.getInstance().getCurrentCycle() == 7)
+            decodeInstruction(InstructionRegister.getInstance().getValue());
+        if (CycleHandler.getInstance().getCurrentCycle() == 7)
+            System.out.println("END FETCH ==========================================");
     }
 
 

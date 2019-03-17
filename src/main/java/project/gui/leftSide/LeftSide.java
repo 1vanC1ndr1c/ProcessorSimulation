@@ -14,13 +14,10 @@ public class LeftSide {
         leftBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
         leftBox.setStyle("-fx-border-color: black");
 
-
         VBox upperLeftSideBox = UpperLeftSide.set(borderPane);
         VBox lowerLeftSideBox = LowerLeftSide.set(borderPane);
 
-
         leftBox.getChildren().addAll(upperLeftSideBox, lowerLeftSideBox);
-
 
         borderPane.setLeft(leftBox);
     }
