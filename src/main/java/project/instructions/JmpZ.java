@@ -2,6 +2,7 @@ package project.instructions;
 
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
+import project.gui.middle.Middle;
 import project.model.processor.ConditionChecker;
 import project.model.processor.behavior.signals.EMDR;
 import project.model.processor.behavior.signals.LPC;
@@ -20,6 +21,8 @@ public class JmpZ implements BaseInstruction {
     @Override
     public void execute() {
 
+        drawActiveElements();
+
         //1. PC <- MDR [23:0}, if A = 0
         if (ConditionChecker.getInstance().checkAccumulator()) {
             //if A = 0
@@ -33,5 +36,22 @@ public class JmpZ implements BaseInstruction {
 
         //end of instruction
         if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+    }
+
+
+    private void drawActiveElements() {
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+            //EMDR
+            if (ConditionChecker.getInstance().checkAccumulator()) {
+                Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "cond");
+            } else {
+                Middle.fillTheGrid(Middle.middleGroup, "cond");
+            }
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+            //LPC
+            if (ConditionChecker.getInstance().checkAccumulator())
+                Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus", "mdr");
+        }
     }
 }

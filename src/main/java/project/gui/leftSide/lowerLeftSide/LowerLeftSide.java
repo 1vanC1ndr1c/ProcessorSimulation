@@ -6,6 +6,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import project.gui.bottom.Bottom;
+import project.gui.bottom.ComponentValuesContainer;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
@@ -28,23 +30,32 @@ public class LowerLeftSide {
         //next button
         buttonNext = new Button("Next");
         buttonNext.setOnAction(e -> {
+            //save current values
+            ComponentValuesContainer.getInstance().saveCurrentComponentValues();
             //get the current cycle number
             Integer currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
             CycleHandler.getInstance().setCurrentCycle(currCycle);
             //do the proper instructions for a cycle
             if (currCycle < 8) Fetch.getInstance().fetch();
             if (currCycle >= 8) Execute.getInstance().execute();
+            Bottom.set(borderPane);
         });
 
 
         //prev button
         prevButton = new Button("Prev.");
         prevButton.setOnAction(e -> {
+            //remove current values
+            ComponentValuesContainer.getInstance().removeCurrentComponentValues();
             Integer currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
             CycleHandler.getInstance().setCurrentCycle(currCycle);
             if (currCycle < 8) Fetch.getInstance().fetch();
             if (currCycle >= 8) Execute.getInstance().execute();
-            if (currCycle == 0) CycleHandler.getInstance().setCurrentCycle(1);
+            if (currCycle == 0){
+                ComponentValuesContainer.getInstance().removeCurrentComponentValues();
+                CycleHandler.getInstance().setCurrentCycle(1);
+            }
+            Bottom.set(borderPane);
         });
 
 

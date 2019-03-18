@@ -1,11 +1,14 @@
 package project.gui.middle;
 
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
 
 public class ComponentBuilder {
 
@@ -18,6 +21,7 @@ public class ComponentBuilder {
             Color componentColor,
             Color connectionColor,
             String componentChoice) {
+
 
         //draw connections to the intbus ===============================================================================
         if (componentChoice.equals("else") || componentChoice.equals("alu")) {
@@ -35,16 +39,26 @@ public class ComponentBuilder {
             connectionToIntBusStackPane2.getChildren().addAll(connectionToIntBus2);
             gridPane.add(connectionToIntBusStackPane2, xCoordinate, yCoordinate + 2);
         }
+
         //==============================================================================================================
         //draw the component ===========================================================================================
-        if (componentChoice.equals("else") || componentChoice.equals("ctrl")) {
+        if (componentChoice.equals("else") || componentChoice.equals("memory")) {
             Rectangle component = new Rectangle(cellDimension, cellDimension);
             component.setFill(componentColor);
             component.setStroke(Color.BLACK);
             Text componentText = new Text(componentName);
             StackPane componentStackPane = new StackPane();
             componentStackPane.getChildren().addAll(component, componentText);
-            gridPane.add(componentStackPane, xCoordinate, yCoordinate);
+            GridPane.setHalignment(component, HPos.CENTER);
+            GridPane.setHalignment(componentText, HPos.CENTER);
+
+            //alu to int reg connection
+            if (componentName.equals("TR")) {
+                GridPane.setHalignment(component, HPos.RIGHT);
+            }
+            gridPane.add(component, xCoordinate, yCoordinate);
+            gridPane.add(componentText, xCoordinate, yCoordinate);
+
         }
         //==============================================================================================================
         //draw alu =====================================================================================================
@@ -63,6 +77,24 @@ public class ComponentBuilder {
             StackPane aluStack = new StackPane();
             aluStack.getChildren().addAll(aluRectangle, aluText);
             gridPane.add(aluStack, xCoordinate, yCoordinate);
+
+        }
+
+        //draw ALU connection to IR
+        if (componentChoice.equals("aluTrConnection")) {
+            //connection to tr
+            Rectangle cornerUp = new Rectangle(cellDimension, cellDimension / 2, 0.2 * cellDimension, cellDimension * 0.605);
+            cornerUp.setFill(componentColor);
+            cornerUp.setStroke(Color.BLACK);
+            Rectangle cornerLeft = new Rectangle(0, cellDimension / 2, cellDimension * 0.65, cellDimension * 0.2);
+            cornerLeft.setFill(componentColor);
+            cornerLeft.setStroke(Color.BLACK);
+
+            GridPane.setHalignment(cornerUp, HPos.CENTER);
+            GridPane.setValignment(cornerUp, VPos.BOTTOM);
+
+            gridPane.add(cornerLeft, 5, 4);
+            gridPane.add(cornerUp, 5, 4);
         }
         //==============================================================================================================
         //draw intbus ==================================================================================================
@@ -75,6 +107,47 @@ public class ComponentBuilder {
                                 connectionColor),
                         i, 7);
             }
+        }
+    }
+
+    public static void redrawActiveElementsFetchPhase() {
+        //1. MAR <- PC
+        //epc
+        if (CycleHandler.getInstance().getCurrentCycle() == 1) {
+
+            Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 2) {
+            //lmar
+            Middle.fillTheGrid(Middle.middleGroup, "pc", "mar", "intbus");
+        }
+
+        //2. MDR <- M[MAR], read
+        if (CycleHandler.getInstance().getCurrentCycle() == 3) {
+            Middle.fillTheGrid(Middle.middleGroup, "memory");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 4) {
+            //lmdr
+            Middle.fillTheGrid(Middle.middleGroup, "mdr", "memory");
+        }
+
+        //3. PC++, IR <- MDR{31:28}
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
+            //inc
+            Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
+            //emdr
+            Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 6) {
+            //lir
+            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "ir");
+        }
+        //4. decode
+        if (CycleHandler.getInstance().getCurrentCycle() == 7) {
+            //nothing
+            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 }

@@ -1,10 +1,9 @@
 package project.model.processor.behavior;
 
 
-import javafx.scene.control.Button;
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
-import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
+import project.gui.middle.ComponentBuilder;
 import project.instructions.*;
 import project.model.processor.*;
 import project.model.processor.behavior.signals.*;
@@ -23,6 +22,8 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
 
 
     public void fetch() {
+
+        ComponentBuilder.redrawActiveElementsFetchPhase();
 
         if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
         if (CycleHandler.getInstance().getCurrentCycle() == 1)
