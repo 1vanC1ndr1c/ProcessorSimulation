@@ -38,7 +38,7 @@ public class LdA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 13) LA.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 14) CycleHandler.getInstance().setCurrentCycle(13);
+        if (CycleHandler.getInstance().getCurrentCycle() == 15) CycleHandler.getInstance().setCurrentCycle(14);
     }
 
     private void drawActiveElements() {

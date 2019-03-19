@@ -23,8 +23,6 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
 
     public void fetch() {
 
-        ComponentBuilder.redrawActiveElementsFetchPhase();
-
         if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
         if (CycleHandler.getInstance().getCurrentCycle() == 1)
             System.out.println("FETCH PHASE:========================================");
@@ -50,6 +48,8 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
             decodeInstruction(InstructionRegister.getInstance().getValue());
         if (CycleHandler.getInstance().getCurrentCycle() == 7)
             System.out.println("END FETCH ==========================================");
+
+        ComponentBuilder.redrawActiveElementsFetchPhase();
     }
 
 

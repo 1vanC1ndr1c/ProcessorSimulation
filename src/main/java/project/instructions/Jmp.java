@@ -28,7 +28,7 @@ public final class Jmp implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 9) LPC.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+        if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
     }
 
 

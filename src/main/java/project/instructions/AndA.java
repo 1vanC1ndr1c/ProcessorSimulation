@@ -41,7 +41,7 @@ public final class AndA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 15) LA.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 16) CycleHandler.getInstance().setCurrentCycle(15);
+        if (CycleHandler.getInstance().getCurrentCycle() == 17) CycleHandler.getInstance().setCurrentCycle(16);
 
         //check:
         //https://www.rapidtables.com/calc/math/binary-calculator.html

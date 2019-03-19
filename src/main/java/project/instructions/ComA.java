@@ -31,7 +31,7 @@ public class ComA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 10) LA.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
+        if (CycleHandler.getInstance().getCurrentCycle() == 12) CycleHandler.getInstance().setCurrentCycle(11);
     }
 
 

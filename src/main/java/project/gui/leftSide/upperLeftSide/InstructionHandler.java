@@ -3,6 +3,7 @@ package project.gui.leftSide.upperLeftSide;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import project.gui.leftSide.lowerLeftSide.CycleHandler;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
 import project.gui.rightSide.UpperRightSide;
@@ -72,8 +73,8 @@ public class InstructionHandler {
         LowerLeftSide.buttonNext.setDisable(false);
         LowerLeftSide.prevButton.setDisable(false);
 
-
-        //draw the instruction flow
+        //reset the current cycle button
+        CycleHandler.getInstance().setCurrentCycle(0);
     }
 
 }

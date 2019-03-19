@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import project.gui.bottom.Bottom;
 import project.gui.bottom.ComponentValuesContainer;
+import project.gui.middle.Middle;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
@@ -51,9 +52,10 @@ public class LowerLeftSide {
             CycleHandler.getInstance().setCurrentCycle(currCycle);
             if (currCycle < 8) Fetch.getInstance().fetch();
             if (currCycle >= 8) Execute.getInstance().execute();
-            if (currCycle == 0){
+            if (currCycle <= 0) {
                 ComponentValuesContainer.getInstance().removeCurrentComponentValues();
-                CycleHandler.getInstance().setCurrentCycle(1);
+                CycleHandler.getInstance().setCurrentCycle(0);
+                Middle.fillTheGrid(Middle.middleGroup);
             }
             Bottom.set(borderPane);
         });

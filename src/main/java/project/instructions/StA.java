@@ -36,7 +36,7 @@ public class StA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 12) WRITE.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 13) CycleHandler.getInstance().setCurrentCycle(12);
+        if (CycleHandler.getInstance().getCurrentCycle() == 14) CycleHandler.getInstance().setCurrentCycle(13);
     }
 
 

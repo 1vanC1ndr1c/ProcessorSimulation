@@ -29,13 +29,15 @@ public class JmpZ implements BaseInstruction {
             if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().sendSubstring("data");
             if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().signal();
             if (CycleHandler.getInstance().getCurrentCycle() == 9) LPC.getInstance().signal();
+            //end of instruction, if statement is true
+            if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
         } else {
             if (CycleHandler.getInstance().getCurrentCycle() == 8)
-                System.out.println("            *** Jump not executed. Acc != 0 ***");
+                if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+            System.out.println("            *** Jump not executed. Acc != 0 ***");
         }
 
-        //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+
     }
 
 

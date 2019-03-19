@@ -26,7 +26,7 @@ public class ShrA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 8) SHR.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) CycleHandler.getInstance().setCurrentCycle(8);
+        if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
     }
 
 

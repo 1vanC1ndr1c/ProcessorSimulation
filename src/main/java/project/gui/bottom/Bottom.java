@@ -1,6 +1,5 @@
 package project.gui.bottom;
 
-import com.sun.javafx.image.IntPixelGetter;
 import javafx.geometry.Insets;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -9,15 +8,14 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
 
-import java.util.LinkedList;
-import java.util.List;
 
 public class Bottom {
+
+    private static GridPane bottomGrid = new GridPane();
 
     public static void set(BorderPane borderPane) {
         //bottom
 
-        GridPane bottomGrid = new GridPane();
         bottomGrid.setStyle("-fx-border-color: black");
         bottomGrid.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.75));
         bottomGrid.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.10));
@@ -40,38 +38,12 @@ public class Bottom {
         gridPane.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.70));
         gridPane.getChildren().clear();
         //every resizing requires drawing the elements again
-        fillTheGrid(gridPane);
+        fillTheGrid(bottomGrid);
     }
 
 
     private static void fillTheGrid(GridPane gridPane) {
-        //fill the grid with rectangles
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 16; j++) {
-                if (j == 0) {
-                    gridPane.add(
-                            new Rectangle(
-                                    gridPane.getWidth() / 16 - 1,
-                                    gridPane.getHeight() / 9 - 1,
-                                    Color.GRAY),
-                            j, i);
-                } else {
-                    gridPane.add(
-                            new Rectangle(
-                                    gridPane.getWidth() / 16 - 1,
-                                    gridPane.getHeight() / 9 - 1,
-                                    j % 2 == 0 ? Color.LIGHTGRAY : Color.WHITE),
-                            j, i);
-                }
-                gridPane.add(
-                        new Rectangle(
-                                gridPane.getWidth() / 16 - 1,
-                                gridPane.getHeight() / 9 - 1,
-                                Color.GRAY),
-                        j, 0);
-            }
-        }
-
+        fillAnEmptyGrid(bottomGrid);
 
         //component names in the first row
         gridPane.add(new Text(" ACC"), 0, 1);
@@ -85,8 +57,7 @@ public class Bottom {
 
         //cycle numbers in first column
         for (Integer i = 1; i <= CycleHandler.getInstance().getCurrentCycle(); i++) {
-            gridPane.add(new Text("|#" + i.toString()),
-                    i, 0);
+            gridPane.add(new Text("|#" + i.toString()), i, 0);
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getAccValues().get(i - 1)), i, 1);
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getAluValues().get(i - 1)), i, 2);
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getIrValues().get(i - 1)), i, 3);
@@ -96,8 +67,47 @@ public class Bottom {
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getPcValues().get(i - 1)), i, 7);
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getTrValues().get(i - 1)), i, 8);
         }
+    }
 
-
+    public static void fillAnEmptyGrid(GridPane gridPane) {
+        //fill the grid with rectangles
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j <= 16; j++) {
+                if (j == 0) {
+                    gridPane.add(
+                            new Rectangle(
+                                    gridPane.getWidth() / 17 - 1,
+                                    gridPane.getHeight() / 9 - 1,
+                                    Color.GRAY),
+                            j, i);
+                } else {
+                    gridPane.add(
+                            new Rectangle(
+                                    gridPane.getWidth() / 17 - 1,
+                                    gridPane.getHeight() / 9 - 1,
+                                    j % 2 == 0 ? Color.LIGHTGRAY : Color.WHITE),
+                            j, i);
+                }
+                gridPane.add(
+                        new Rectangle(
+                                gridPane.getWidth() / 17 - 1,
+                                gridPane.getHeight() / 9 - 1,
+                                Color.GRAY),
+                        j, 0);
+            }
+        }
+        //cycle numbers in first column
+        for (Integer i = 1; i <= CycleHandler.getInstance().getCurrentCycle(); i++) {
+            gridPane.add(new Text(""), i, 0);
+            gridPane.add(new Text(""), i, 1);
+            gridPane.add(new Text(""), i, 2);
+            gridPane.add(new Text(""), i, 3);
+            gridPane.add(new Text(""), i, 4);
+            gridPane.add(new Text(""), i, 5);
+            gridPane.add(new Text(""), i, 6);
+            gridPane.add(new Text(""), i, 7);
+            gridPane.add(new Text(""), i, 8);
+        }
     }
 
 

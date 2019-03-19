@@ -19,7 +19,6 @@ public final class AddA implements BaseInstruction {
     @Override
     public void execute() {
 
-        drawActiveElements();
 
         //1. MAR <- MDR[23:0}
         if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().sendSubstring("data");
@@ -41,7 +40,10 @@ public final class AddA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 15) LA.getInstance().signal();
 
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 16) CycleHandler.getInstance().setCurrentCycle(15);
+        if (CycleHandler.getInstance().getCurrentCycle() == 17) CycleHandler.getInstance().setCurrentCycle(16);
+
+
+        drawActiveElements();
     }
 
     @SuppressWarnings("Duplicates")

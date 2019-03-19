@@ -114,7 +114,7 @@ public class ComponentBuilder {
         //1. MAR <- PC
         //epc
         if (CycleHandler.getInstance().getCurrentCycle() == 1) {
-
+            //epc
             Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 2) {
