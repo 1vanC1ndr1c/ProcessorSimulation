@@ -11,7 +11,7 @@ public class LeftSide {
     public static void set(BorderPane borderPane) {
 
         VBox leftBox = new VBox();
-        leftBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
+        leftBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.18));
         leftBox.setStyle("-fx-border-color: black");
 
         VBox upperLeftSideBox = UpperLeftSide.set(borderPane);

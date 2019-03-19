@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="01cb1e98-0e6c-479e-94f7-94a3f9b53e84" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="01cb1e98-0e6c-479e-94f7-94a3f9b53e84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/CycleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/CycleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/InstructionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/InstructionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/ComA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/ComA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/Jmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/Jmp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/LdA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/LdA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/StA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/StA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/bottom/Bottom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/bottom/Bottom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/leftSide/lowerLeftSide/CycleHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/leftSide/lowerLeftSide/CycleHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/leftSide/lowerLeftSide/LowerLeftSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/leftSide/lowerLeftSide/LowerLeftSide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/leftSide/upperLeftSide/InstructionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/leftSide/upperLeftSide/InstructionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/AddA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/AddA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/AndA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/AndA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/ComA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/ComA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/Jmp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/Jmp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/JmpZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/JmpZ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/LdA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/LdA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/ShrA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/ShrA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/StA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/StA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/Fetch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/model/processor/behavior/Fetch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/output/OutputHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/output/OutputHandler.class" afterDir="false" />
+    </list>
+>>>>>>> guitesting
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,30 +49,32 @@
     <session id="1248389291">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="42" />
-          <entry key="java" value="16287" />
+          <entry key="java" value="21437" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16287" />
+          <entry key="JAVA" value="21437" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="XML" value="6" />
         </counts>
@@ -45,13 +82,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JAVA/project" value="1" />
-          <entry key="java" value="764" />
+          <entry key="java" value="865" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="764" />
+          <entry key="JAVA" value="865" />
           <entry key="UML" value="1" />
           <entry key="XML" value="2" />
         </counts>
@@ -61,19 +98,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
               <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="-458">
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,6 +115,54 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+>>>>>>> guitesting
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="544">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+=======
+            <state relative-caret-position="-391">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+>>>>>>> guitesting
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> guitesting
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -94,6 +176,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>s</find>
+      <find>system.out</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,25 +185,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ProgramCounter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/Validation/Validator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/top/Top.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/instructions/BaseInstruction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/control/ComponentControll.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/control/ComponentControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/data/MemoryLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/InstructionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LowerLeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/COM.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EMDR.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/INC.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LALU.java" />
@@ -132,7 +203,23 @@
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/SHR.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/WRITE.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/ControlUnit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/validation/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/cycleHandler/CycleHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/cycleHandler/ComponentColorPicker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/instructions/BaseInstruction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/top/Top.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/ComponentValuesContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/ComA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/Jmp.java" />
@@ -140,19 +227,15 @@
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/LdA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/StA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/CycleHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/InstructionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/validation/Validator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/InstructionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/CycleHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
       </list>
     </option>
   </component>
@@ -170,8 +253,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="82" />
-    <option name="y" value="-20" />
+    <option name="x" value="163" />
+    <option name="y" value="-19" />
     <option name="width" value="854" />
     <option name="height" value="1003" />
   </component>
@@ -355,7 +438,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552862554308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553007315814" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -462,12 +545,18 @@
       <workItem from="1552662926253" duration="6459000" />
       <workItem from="1552675094618" duration="2336000" />
       <workItem from="1552755849413" duration="5397000" />
-      <workItem from="1552851122250" duration="9423000" />
+      <workItem from="1552851122250" duration="9535000" />
+      <workItem from="1552909933513" duration="17378000" />
+      <workItem from="1553002015201" duration="3682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="62822000" />
+=======
+    <option name="totallyTimeSpent" value="83988000" />
+>>>>>>> guitesting
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,8 +579,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49816626" visible="true" weight="0.030269058" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" weight="0.14798206" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49755502" visible="true" weight="0.030269058" />
+>>>>>>> guitesting
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398641" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -499,8 +593,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183374" side_tool="true" visible="true" weight="0.1087444" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49938875" weight="0.23991032" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.502445" side_tool="true" weight="0.1087444" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4987775" weight="0.2264574" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -519,229 +613,54 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LA.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="544">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/MemorySubmitButtonHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1021">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/validation/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AddA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AndA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="39" column="109" selection-start-line="39" selection-start-column="109" selection-end-line="39" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/BaseInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/ComA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/Jmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="108" selection-start-line="26" selection-start-column="108" selection-end-line="26" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="108" selection-start-line="34" selection-start-column="108" selection-end-line="34" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/LdA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="109" selection-start-line="36" selection-start-column="109" selection-end-line="36" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="107" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/StA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/HexHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/memory/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/AND.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/COM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EALU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EMDR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/INC.java">
-      <provider selected="true" editor-type-id="text-editor">
+=======
         <state relative-caret-position="289">
           <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+>>>>>>> guitesting
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LALU.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="799">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+=======
         <state relative-caret-position="272">
           <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+>>>>>>> guitesting
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LIR.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="594">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+=======
         <state relative-caret-position="272">
           <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+>>>>>>> guitesting
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/LMAR.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-1021">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+=======
         <state relative-caret-position="272">
           <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+>>>>>>> guitesting
         </state>
       </provider>
     </entry>
@@ -780,23 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/Accumulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -829,6 +731,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -874,16 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/project">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -912,6 +807,282 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/cycleHandler/ComponentColorPicker.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/EPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/ADD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/signals/BaseSignal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
+          <folding>
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/BaseInstruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="86" selection-start-line="14" selection-start-column="86" selection-end-line="14" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/logic/InstructionPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/top/Top.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/Jmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="109" selection-start-line="30" selection-start-column="109" selection-end-line="30" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/ComA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="33" column="109" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AndA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/JmpZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="116" selection-start-line="35" selection-start-column="116" selection-end-line="35" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/LdA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="40" column="109" selection-start-line="40" selection-start-column="109" selection-end-line="40" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/ShrA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="108" selection-start-line="28" selection-start-column="108" selection-end-line="28" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/StA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="38" column="109" selection-start-line="38" selection-start-column="109" selection-end-line="38" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/instructions/AddA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+=======
+        <state relative-caret-position="272">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> guitesting
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/CycleHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1341">
+          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/InstructionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+=======
+        <state relative-caret-position="-87">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+>>>>>>> guitesting
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/beans/InvalidationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/ComponentValuesContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-458">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="uml://JAVA/project">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>project</OriginalElement>
+          <nodes>
+            <node x="" y="">project.instructions</node>
+            <node x="" y="">project.output</node>
+            <node x="" y="">project.logic</node>
+            <node x="" y="">project.data</node>
+            <node x="" y="">project.Processor</node>
+            <node x="" y="">project.model</node>
+            <node x="" y="">project.gui</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="137.0" y="126.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> guitesting
   </component>
   <component name="masterDetails">
     <states>

@@ -1,10 +1,9 @@
 package project.model.processor.behavior;
 
 
-import javafx.scene.control.Button;
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
-import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
+import project.gui.middle.ComponentBuilder;
 import project.instructions.*;
 import project.model.processor.*;
 import project.model.processor.behavior.signals.*;
@@ -49,6 +48,8 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
             decodeInstruction(InstructionRegister.getInstance().getValue());
         if (CycleHandler.getInstance().getCurrentCycle() == 7)
             System.out.println("END FETCH ==========================================");
+
+        ComponentBuilder.redrawActiveElementsFetchPhase();
     }
 
 

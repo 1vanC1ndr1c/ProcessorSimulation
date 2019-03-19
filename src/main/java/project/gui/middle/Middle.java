@@ -1,15 +1,24 @@
 package project.gui.middle;
 
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Middle {
+
+    public static GridPane middleGroup;
 
     public static void set(BorderPane borderPane) {
 
-        GridPane middleGroup = new GridPane();
+        middleGroup = new GridPane();
         middleGroup.setStyle("-fx-border-color: black");
         middleGroup.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
         middleGroup.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.70));
@@ -26,7 +35,7 @@ public class Middle {
     }
 
     //method that deals with grid resizing
-    public static void resize(GridPane gridPane, BorderPane borderPane) {
+    private static void resize(GridPane gridPane, BorderPane borderPane) {
         gridPane.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
         gridPane.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.70));
         gridPane.getChildren().clear();
@@ -35,7 +44,7 @@ public class Middle {
     }
 
     //method that draws the elements onto the screen
-    private static void fillTheGrid(GridPane gridPane) {
+    public static void fillTheGrid(GridPane gridPane, String... activeElements) {
 
         //fill the grid with rectangles
         for (int i = 0; i < 12; i++) {
@@ -55,12 +64,31 @@ public class Middle {
             Rectangle rectangle = (Rectangle) gridPane.getChildren().get(0);
             cellDimension = rectangle.getHeight();
         }
+
+        //default colors, when components are not active
+        Color defaultComponentColor = Color.GRAY;
+        Color defaultConnectionColor = Color.BLUE;
+        Color defaultMemoryColor = Color.PINK;
+
+        //colors when components are active
+        Color activeComponentColor = Color.GREEN;
+        Color activeConnectionColor = Color.LIGHTGREEN;
+        Color activeMemoryColor = Color.ORANGE;
+
+        List<String> activeElementsList = new ArrayList<>();
+        activeElementsList.addAll(Arrays.asList(activeElements));
+
+
+        //draw the elements ============================================================================================
         //MDR
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "MDR",
                 0, 4,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("mdr") ? activeComponentColor : defaultComponentColor,
+                (activeElementsList.contains("intbus") && activeElementsList.contains("mdr"))
+                        ? activeConnectionColor : defaultConnectionColor,
                 "else");
 
         //COND
@@ -68,63 +96,98 @@ public class Middle {
                 "COND",
                 2, 3,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("cond") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("cond") ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //ACC
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "ACC",
                 2, 5,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("acc") ? activeComponentColor : defaultComponentColor,
+                (activeElementsList.contains("acc")
+                        && !activeElementsList.contains("noIntBus"))
+                        ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //TR
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "TR",
                 4, 4,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("tr") ? activeComponentColor : defaultComponentColor,
+                (activeElementsList.contains("tr")
+                        && activeElementsList.contains("intbus")
+                        && activeElementsList.contains("trToIntBus"))
+                        ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //PC
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "PC",
                 7, 4,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("pc") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("pc") ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //IR
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "IR",
                 9, 4,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("ir") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("ir") ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //MAR
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "MAR",
                 11, 4,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("mar") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("mar") ? activeConnectionColor : defaultConnectionColor,
                 "else");
-        //CONTROL
-        ComponentBuilder.buildComponentAndIntBusConnection(
-                "CONTROL \n UNIT",
-                5, 2,
-                gridPane, cellDimension,
-                Color.GREEN, Color.BLUE,
-                "ctrl");
         //ALU
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "ALU",
                 5, 5,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("alu") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("alu") ? activeConnectionColor : defaultConnectionColor,
                 "alu");
         //IntBus
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "intbus",
                 5, 5,
                 gridPane, cellDimension,
-                Color.GRAY, Color.BLUE,
+                //check if the component is active
+                activeElementsList.contains("intbus") ? activeComponentColor : defaultComponentColor,
+                activeElementsList.contains("intbus") ? activeConnectionColor : defaultConnectionColor,
                 "intbus");
+
+        //Memory
+        ComponentBuilder.buildComponentAndIntBusConnection(
+                "Memory",
+                5, 2,
+                gridPane, cellDimension,
+                //check if the component is active
+                activeElementsList.contains("memory") ? activeMemoryColor : defaultMemoryColor,
+                Color.WHITE,
+                "memory");
+
+        //ALU to TR connection
+        ComponentBuilder.buildComponentAndIntBusConnection(
+                "aluTrConnection",
+                5, 2,
+                gridPane, cellDimension,
+                //check if the component is active
+                activeElementsList.contains("aluTrConnection") ? activeConnectionColor : defaultConnectionColor,
+                Color.WHITE,
+                "aluTrConnection");
+
     }
 }
