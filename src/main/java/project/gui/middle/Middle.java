@@ -119,7 +119,6 @@ public class Middle {
                 //check if the component is active
                 activeElementsList.contains("tr") ? activeComponentColor : defaultComponentColor,
                 (activeElementsList.contains("tr")
-                        && activeElementsList.contains("intbus")
                         && activeElementsList.contains("trToIntBus"))
                         ? activeConnectionColor : defaultConnectionColor,
                 "else");
@@ -130,7 +129,8 @@ public class Middle {
                 gridPane, cellDimension,
                 //check if the component is active
                 activeElementsList.contains("pc") ? activeComponentColor : defaultComponentColor,
-                activeElementsList.contains("pc") ? activeConnectionColor : defaultConnectionColor,
+                (activeElementsList.contains("pc")
+                        && !activeElementsList.contains("inc")) ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //IR
         ComponentBuilder.buildComponentAndIntBusConnection(
@@ -148,7 +148,8 @@ public class Middle {
                 gridPane, cellDimension,
                 //check if the component is active
                 activeElementsList.contains("mar") ? activeComponentColor : defaultComponentColor,
-                activeElementsList.contains("mar") ? activeConnectionColor : defaultConnectionColor,
+                (activeElementsList.contains("intbus") && activeElementsList.contains("mar"))
+                        ? activeConnectionColor : defaultConnectionColor,
                 "else");
         //ALU
         ComponentBuilder.buildComponentAndIntBusConnection(

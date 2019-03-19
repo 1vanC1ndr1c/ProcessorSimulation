@@ -41,5 +41,9 @@ public final class Jmp implements BaseInstruction {
             //LPC
             Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus", "mdr");
         }
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
+        }
     }
 }

@@ -133,12 +133,8 @@ public class ComponentBuilder {
 
         //3. PC++, IR <- MDR{31:28}
         if (CycleHandler.getInstance().getCurrentCycle() == 5) {
-            //inc
-            Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus");
-        }
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
-            //emdr
-            Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus");
+            //inc, emdr
+            Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus", "inc");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 6) {
             //lir

@@ -36,5 +36,9 @@ public class ShrA implements BaseInstruction {
             //EMDR
             Middle.fillTheGrid(Middle.middleGroup, "acc", "noIntBus");
         }
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
+        }
     }
 }

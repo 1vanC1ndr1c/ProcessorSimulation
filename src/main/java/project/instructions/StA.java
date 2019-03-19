@@ -34,9 +34,8 @@ public class StA implements BaseInstruction {
 
         //3. M{MAR} <- MDR
         if (CycleHandler.getInstance().getCurrentCycle() == 12) WRITE.getInstance().signal();
-
         //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 14) CycleHandler.getInstance().setCurrentCycle(13);
+        if (CycleHandler.getInstance().getCurrentCycle() == 15) CycleHandler.getInstance().setCurrentCycle(14);
     }
 
 
@@ -62,11 +61,15 @@ public class StA implements BaseInstruction {
         //3. M[MAR] <- MDR
         if (CycleHandler.getInstance().getCurrentCycle() == 12) {
             //write
-            Middle.fillTheGrid(Middle.middleGroup, "memory");
+            Middle.fillTheGrid(Middle.middleGroup, "memory", "mdr", "mar");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 13) {
             //write
-            Middle.fillTheGrid(Middle.middleGroup, "memory");
+            Middle.fillTheGrid(Middle.middleGroup, "memory", "mdr", "mar");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 14) {
+            //write
+            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 }

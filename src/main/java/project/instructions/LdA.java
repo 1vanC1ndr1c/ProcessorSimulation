@@ -68,12 +68,12 @@ public class LdA implements BaseInstruction {
             Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 13) {
-            //EMDR, ADD, LALU
-            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus");
-        }
-        if (CycleHandler.getInstance().getCurrentCycle() == 13) {
             //LA
-            Middle.fillTheGrid(Middle.middleGroup, "acc", "intbus", "mdr");
+            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "acc");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 14) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 }

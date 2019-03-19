@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import project.gui.bottom.Bottom;
 import project.gui.bottom.ComponentValuesContainer;
 import project.gui.middle.Middle;
+import project.model.processor.Accumulator;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
@@ -42,12 +43,12 @@ public class LowerLeftSide {
             Bottom.set(borderPane);
         });
 
-
         //prev button
         prevButton = new Button("Prev.");
         prevButton.setOnAction(e -> {
             //remove current values
-            ComponentValuesContainer.getInstance().removeCurrentComponentValues();
+            if(CycleHandler.getInstance().getCurrentCycle() > 1)ComponentValuesContainer.getInstance().removeCurrentComponentValues();
+            if(CycleHandler.getInstance().getCurrentCycle() > 1)ComponentValuesContainer.getInstance().setNewComponentValues();
             Integer currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
             CycleHandler.getInstance().setCurrentCycle(currCycle);
             if (currCycle < 8) Fetch.getInstance().fetch();

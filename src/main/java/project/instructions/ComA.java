@@ -48,5 +48,9 @@ public class ComA implements BaseInstruction {
             //LMDR
             Middle.fillTheGrid(Middle.middleGroup, "tr", "intbus", "trToIntBus", "acc");
         }
+        if (CycleHandler.getInstance().getCurrentCycle() == 11) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
+        }
     }
 }

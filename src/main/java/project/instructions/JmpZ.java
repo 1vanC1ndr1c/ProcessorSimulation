@@ -32,8 +32,8 @@ public class JmpZ implements BaseInstruction {
             //end of instruction, if statement is true
             if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
         } else {
-            if (CycleHandler.getInstance().getCurrentCycle() == 8)
-                if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+            if (CycleHandler.getInstance().getCurrentCycle() == 9)
+                CycleHandler.getInstance().setCurrentCycle(8);
             System.out.println("            *** Jump not executed. Acc != 0 ***");
         }
 
@@ -54,6 +54,16 @@ public class JmpZ implements BaseInstruction {
             //LPC
             if (ConditionChecker.getInstance().checkAccumulator())
                 Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus", "mdr");
+        }
+        if (!ConditionChecker.getInstance().checkAccumulator()) {
+            if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+                //instruction complete, no active elements
+                Middle.fillTheGrid(Middle.middleGroup);
+            }
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 10) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 }

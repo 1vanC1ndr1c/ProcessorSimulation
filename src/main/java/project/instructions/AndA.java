@@ -72,20 +72,24 @@ public final class AndA implements BaseInstruction {
 
         //3. A <- A & MDR
         if (CycleHandler.getInstance().getCurrentCycle() == 12) {
-            //EMDR, ADD
-            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "alu");
+            //EMDR, AND
+            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "alu", "acc", "noIntBus");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 13) {
             //EMDR, ADD, LALU
-            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "alu", "tr", "aluTrConnection");
+            Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "alu", "tr", "aluTrConnection", "acc", "noIntBus");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 14) {
             //EALU
-            Middle.fillTheGrid(Middle.middleGroup, "intbus", "tr", "trToIntBUs");
+            Middle.fillTheGrid(Middle.middleGroup, "intbus", "tr", "trToIntBus");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 15) {
             //LA
-            Middle.fillTheGrid(Middle.middleGroup, "acc", "intbus", "tr", "trToIntBUs");
+            Middle.fillTheGrid(Middle.middleGroup, "acc", "intbus", "tr", "trToIntBus");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 16) {
+            //instruction complete, no active elements
+            Middle.fillTheGrid(Middle.middleGroup);
         }
 
     }
