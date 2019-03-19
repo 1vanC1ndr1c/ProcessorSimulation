@@ -39,7 +39,6 @@ public class HexHandler {
         while (resultAsString.length() < 6)
             resultAsString = "0" + resultAsString;
         return resultAsString;
-
     }
 
     private static String resultAsString(Integer result) {

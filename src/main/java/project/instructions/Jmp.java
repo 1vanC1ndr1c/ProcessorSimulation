@@ -19,16 +19,14 @@ public final class Jmp implements BaseInstruction {
 
     @Override
     public void execute() {
-
-        drawActiveElements();
-
         //1. PC <- MDR [23:0}, if A = 0
         if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().sendSubstring("data");
         if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 9) LPC.getInstance().signal();
-
         //end of instruction
         if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
+
+        drawActiveElements();
     }
 
 

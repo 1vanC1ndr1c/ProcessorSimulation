@@ -8,13 +8,16 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
 
+/**
+ * This class is used to draw the bottom portion of the gui.
+ * In the bottom portion we see component values as they change through time
+ */
 
 public class Bottom {
 
     private static GridPane bottomGrid = new GridPane();
 
     public static void set(BorderPane borderPane) {
-        //bottom
 
         bottomGrid.setStyle("-fx-border-color: black");
         bottomGrid.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.75));
@@ -32,6 +35,7 @@ public class Bottom {
         borderPane.setBottom(bottomGrid);
     }
 
+
     //method that deals with grid resizing
     private static void resize(GridPane gridPane, BorderPane borderPane) {
         gridPane.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
@@ -43,6 +47,7 @@ public class Bottom {
 
 
     private static void fillTheGrid(GridPane gridPane) {
+        //draw the initial grid
         fillAnEmptyGrid(bottomGrid);
 
         //component names in the first row
@@ -55,7 +60,7 @@ public class Bottom {
         gridPane.add(new Text(" PC"), 0, 7);
         gridPane.add(new Text(" TR"), 0, 8);
 
-        //cycle numbers in first column
+        //cycle numbers in the first row
         for (Integer i = 1; i <= CycleHandler.getInstance().getCurrentCycle(); i++) {
             gridPane.add(new Text("|#" + i.toString()), i, 0);
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getAccValues().get(i - 1)), i, 1);
@@ -69,11 +74,13 @@ public class Bottom {
         }
     }
 
+
     public static void fillAnEmptyGrid(GridPane gridPane) {
         //fill the grid with rectangles
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j <= 16; j++) {
                 if (j == 0) {
+                    //first column and first row will be gray
                     gridPane.add(
                             new Rectangle(
                                     gridPane.getWidth() / 17 - 1,
@@ -81,6 +88,7 @@ public class Bottom {
                                     Color.GRAY),
                             j, i);
                 } else {
+                    //the grid is interchanging white and light gray columns
                     gridPane.add(
                             new Rectangle(
                                     gridPane.getWidth() / 17 - 1,
@@ -88,6 +96,7 @@ public class Bottom {
                                     j % 2 == 0 ? Color.LIGHTGRAY : Color.WHITE),
                             j, i);
                 }
+                //first column and first row will be gray
                 gridPane.add(
                         new Rectangle(
                                 gridPane.getWidth() / 17 - 1,
@@ -96,7 +105,8 @@ public class Bottom {
                         j, 0);
             }
         }
-        //cycle numbers in first column
+        //this is used to put placeholder text into grid
+        //otherwise the grid changes size in the first cycle
         for (Integer i = 1; i <= CycleHandler.getInstance().getCurrentCycle(); i++) {
             gridPane.add(new Text(""), i, 0);
             gridPane.add(new Text(""), i, 1);
@@ -109,6 +119,4 @@ public class Bottom {
             gridPane.add(new Text(""), i, 8);
         }
     }
-
-
 }

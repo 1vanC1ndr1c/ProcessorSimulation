@@ -16,26 +16,22 @@ public class StA implements BaseInstruction {
         return ST_A;
     }
 
-
     @Override
     public void execute() {
-
-        drawActiveElements();
-
         //1. MAR <- MDR[23:0}
         if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().sendSubstring("data");
         if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 9) LMAR.getInstance().signal();
-
         //2. MDR <- A
         if (CycleHandler.getInstance().getCurrentCycle() == 10) EA.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 11) LMDR.getInstance().setSource("bus");
         if (CycleHandler.getInstance().getCurrentCycle() == 11) LMDR.getInstance().signal();
-
         //3. M{MAR} <- MDR
         if (CycleHandler.getInstance().getCurrentCycle() == 12) WRITE.getInstance().signal();
         //end of instruction
         if (CycleHandler.getInstance().getCurrentCycle() == 15) CycleHandler.getInstance().setCurrentCycle(14);
+
+        drawActiveElements();
     }
 
 

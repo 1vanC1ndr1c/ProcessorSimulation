@@ -10,6 +10,10 @@ import project.model.processor.*;
 
 import java.util.Map;
 
+/**
+ * Class that validates various input data from gui before
+ * committing the changed values into java objects.
+ */
 public class Validator {
 
     public static void validateAndSetMemorySubmitData(Map<String, String> tmpMap, GridPane gridPane) {
@@ -31,6 +35,7 @@ public class Validator {
             i++;
         }
     }
+
 
     public static void validateAndSetProcessorComponentsData(GridPane gridPane) {
 

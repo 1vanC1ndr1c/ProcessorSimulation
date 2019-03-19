@@ -1,10 +1,7 @@
 package project.gui.middle;
 
-import javafx.geometry.HPos;
-import javafx.geometry.VPos;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -12,12 +9,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class that is used to draw the middle of the gui,
+ * where components and their changes through time are being shown
+ */
 public class Middle {
 
+    //must be public, because other parts of the gui need access to the middle to change currently active components
     public static GridPane middleGroup;
 
     public static void set(BorderPane borderPane) {
-
         middleGroup = new GridPane();
         middleGroup.setStyle("-fx-border-color: black");
         middleGroup.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
@@ -42,6 +43,7 @@ public class Middle {
         //every resizing requires drawing the elements again
         fillTheGrid(gridPane);
     }
+
 
     //method that draws the elements onto the screen
     public static void fillTheGrid(GridPane gridPane, String... activeElements) {
@@ -78,7 +80,6 @@ public class Middle {
         List<String> activeElementsList = new ArrayList<>();
         activeElementsList.addAll(Arrays.asList(activeElements));
 
-
         //draw the elements ============================================================================================
         //MDR
         ComponentBuilder.buildComponentAndIntBusConnection(
@@ -90,7 +91,6 @@ public class Middle {
                 (activeElementsList.contains("intbus") && activeElementsList.contains("mdr"))
                         ? activeConnectionColor : defaultConnectionColor,
                 "else");
-
         //COND
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "COND",
@@ -169,7 +169,6 @@ public class Middle {
                 activeElementsList.contains("intbus") ? activeComponentColor : defaultComponentColor,
                 activeElementsList.contains("intbus") ? activeConnectionColor : defaultConnectionColor,
                 "intbus");
-
         //Memory
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "Memory",
@@ -179,7 +178,6 @@ public class Middle {
                 activeElementsList.contains("memory") ? activeMemoryColor : defaultMemoryColor,
                 Color.WHITE,
                 "memory");
-
         //ALU to TR connection
         ComponentBuilder.buildComponentAndIntBusConnection(
                 "aluTrConnection",
@@ -189,6 +187,5 @@ public class Middle {
                 activeElementsList.contains("aluTrConnection") ? activeConnectionColor : defaultConnectionColor,
                 Color.WHITE,
                 "aluTrConnection");
-
     }
 }

@@ -4,6 +4,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
 
+/**
+ * On the right side of the gui there are memory and component values being displayed,
+ * as well as the option to change those values
+ */
+
 public class RightSide {
 
     public static void set(BorderPane borderPane) {

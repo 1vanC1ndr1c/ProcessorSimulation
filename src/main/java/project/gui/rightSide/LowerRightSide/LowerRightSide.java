@@ -14,6 +14,11 @@ import project.model.memory.Memory;
 
 import java.util.Map;
 
+/**
+ * This class is used to draw the lower right side of the gui,
+ * where memory addressees and their respective locations are being shown,
+ * as well as the submit button that saves the changes into memory object
+ */
 public class LowerRightSide {
 
     public final static GridPane memoryGridPane = new GridPane();

@@ -19,14 +19,12 @@ public class ShrA implements BaseInstruction {
 
     @Override
     public void execute() {
-
-        drawActiveElements();
-
         //1. A <- shr(A)
         if (CycleHandler.getInstance().getCurrentCycle() == 8) SHR.getInstance().signal();
-
         //end of instruction
         if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+
+        drawActiveElements();
     }
 
 

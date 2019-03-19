@@ -7,9 +7,13 @@ import project.model.processor.*;
 import java.util.*;
 
 @Data
+/**
+ * CLass used to save component values as they change through time
+ * so that they can be retrieved when using 'prev' and 'next button'
+ */
 public class ComponentValuesContainer {
-    private static ComponentValuesContainer ourInstance = new ComponentValuesContainer();
 
+    //map that save component values
     Map<Integer, String> accValues = new LinkedHashMap<>();
     Map<Integer, String> aluValues = new LinkedHashMap<>();
     Map<Integer, String> irValues = new LinkedHashMap<>();
@@ -20,8 +24,11 @@ public class ComponentValuesContainer {
     Map<Integer, String> trValues = new LinkedHashMap<>();
 
 
+    //singleton
+    private static ComponentValuesContainer COMPONENT_VALUES_CONTAINER = new ComponentValuesContainer();
+
     public static ComponentValuesContainer getInstance() {
-        return ourInstance;
+        return COMPONENT_VALUES_CONTAINER;
     }
 
     public void saveCurrentComponentValues() {
@@ -35,6 +42,7 @@ public class ComponentValuesContainer {
         trValues.put(CycleHandler.getInstance().getCurrentCycle(), TemporaryRegister.getInstance().getValue());
     }
 
+    //when going back with the button 'prev', the newest values are deleted
     public void removeCurrentComponentValues() {
         accValues.remove(CycleHandler.getInstance().getCurrentCycle());
         aluValues.remove(CycleHandler.getInstance().getCurrentCycle());
@@ -46,6 +54,8 @@ public class ComponentValuesContainer {
         trValues.remove(CycleHandler.getInstance().getCurrentCycle());
     }
 
+    //when going back with the button 'prev', the newest values are deleted
+    //and the older ones are reloaded into the components
     public void setNewComponentValues() {
         Accumulator.getInstance().setValue(accValues.get(accValues.size() - 1));
         ALU.getInstance().setValue(aluValues.get(aluValues.size() - 1));

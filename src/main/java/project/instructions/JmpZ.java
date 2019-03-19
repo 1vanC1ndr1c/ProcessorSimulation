@@ -20,9 +20,6 @@ public class JmpZ implements BaseInstruction {
 
     @Override
     public void execute() {
-
-        drawActiveElements();
-
         //1. PC <- MDR [23:0}, if A = 0
         if (ConditionChecker.getInstance().checkAccumulator()) {
             //if A = 0
@@ -36,8 +33,7 @@ public class JmpZ implements BaseInstruction {
                 CycleHandler.getInstance().setCurrentCycle(8);
             System.out.println("            *** Jump not executed. Acc != 0 ***");
         }
-
-
+        drawActiveElements();
     }
 
 

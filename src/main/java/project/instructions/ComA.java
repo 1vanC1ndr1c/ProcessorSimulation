@@ -21,17 +21,15 @@ public class ComA implements BaseInstruction {
 
     @Override
     public void execute() {
-
-        drawActiveElements();
-
         //1. A <- not A
         if (CycleHandler.getInstance().getCurrentCycle() == 8) COM.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 8) LALU.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 9) EALU.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 10) LA.getInstance().signal();
-
         //end of instruction
         if (CycleHandler.getInstance().getCurrentCycle() == 12) CycleHandler.getInstance().setCurrentCycle(11);
+
+        drawActiveElements();
     }
 
 

@@ -13,8 +13,13 @@ import project.model.memory.Memory;
 import project.model.processor.ControlUnit;
 import project.model.processor.ProgramCounter;
 
+/**
+ * This class is used to create, save, fetch and execute an instruction.
+ */
 public class InstructionHandler {
 
+    //method that places an instruction named 'instructionName'
+    // into the left side grid where instructions are being picked
     public static void createInstructionRow(String instructionName, int column, int row, boolean isMemoryInstruction, GridPane gridPane) {
 
         //default memory location to save the instruction
@@ -42,9 +47,10 @@ public class InstructionHandler {
     }
 
 
+    //method that does the background logic of instruction fetching and executing
     public static void doTheInstruction(String instructionName, String memoryLocation) {
 
-        //make the instruction code that will be written into memory ===================================================
+        //make the instruction code that will be written into the memory ===============================================
         String opCode = InstructionPicker.retrunOpCode(instructionName.toLowerCase());
         String irrelevantBits = "0";
         if (memoryLocation.equals("is not memory instruction")) {
@@ -56,17 +62,17 @@ public class InstructionHandler {
         //check the validity of the input data
         Validator.validateAndSetProcessorComponentsData(UpperRightSide.componentsGridPane);
 
-        //save the instruction
+        //save the instruction into memory object
         String memoryLocationOfInstruction = ProgramCounter.getInstance().getValue();
         Memory.getInstance().getLocationAndContent().put(memoryLocationOfInstruction, memoryValueOfInstruction);
 
-        //change the gui memory
+        //change the memory shown in gui
         Validator.validateAndSetMemorySubmitData(Memory.getInstance().getLocationAndContent(), LowerRightSide.memoryGridPane);
 
         //fetch and execute the instruction
         ControlUnit.getInstance().start();
 
-        //change the gui components values
+        //change the gui component values
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
 
         //instruction started, enable "next" and "prev" buttons
@@ -76,5 +82,4 @@ public class InstructionHandler {
         //reset the current cycle button
         CycleHandler.getInstance().setCurrentCycle(0);
     }
-
 }

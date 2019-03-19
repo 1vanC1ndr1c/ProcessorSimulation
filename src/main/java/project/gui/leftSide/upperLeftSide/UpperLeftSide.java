@@ -6,6 +6,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+/**
+ * Class that draws the upper left side of gui, where instructions are being picked and ran.
+ */
 public class UpperLeftSide {
 
     public static VBox set(BorderPane borderPane) {

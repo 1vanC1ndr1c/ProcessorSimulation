@@ -21,7 +21,6 @@ import java.util.Map;
  */
 public class MemorySubmitButtonHandler {
 
-
     public static void handle(GridPane gridPane) {
 
         Map<String, String> tmpMap = new LinkedHashMap<>();

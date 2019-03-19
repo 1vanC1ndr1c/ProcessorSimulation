@@ -10,8 +10,14 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import project.gui.leftSide.lowerLeftSide.CycleHandler;
 
+/**
+ * Class that is used to build a component and show it in the
+ * middle grid of the gui.
+ */
 public class ComponentBuilder {
 
+    //method takes in the name, position and color of the component and it's respective connection the the
+    //internal bus or some other component
     public static void buildComponentAndIntBusConnection(
             String componentName,
             Integer xCoordinate,
@@ -21,7 +27,6 @@ public class ComponentBuilder {
             Color componentColor,
             Color connectionColor,
             String componentChoice) {
-
 
         //draw connections to the intbus ===============================================================================
         if (componentChoice.equals("else") || componentChoice.equals("alu")) {
@@ -39,7 +44,6 @@ public class ComponentBuilder {
             connectionToIntBusStackPane2.getChildren().addAll(connectionToIntBus2);
             gridPane.add(connectionToIntBusStackPane2, xCoordinate, yCoordinate + 2);
         }
-
         //==============================================================================================================
         //draw the component ===========================================================================================
         if (componentChoice.equals("else") || componentChoice.equals("memory")) {
@@ -52,13 +56,11 @@ public class ComponentBuilder {
             GridPane.setHalignment(component, HPos.CENTER);
             GridPane.setHalignment(componentText, HPos.CENTER);
 
-            //alu to int reg connection
             if (componentName.equals("TR")) {
                 GridPane.setHalignment(component, HPos.RIGHT);
             }
             gridPane.add(component, xCoordinate, yCoordinate);
             gridPane.add(componentText, xCoordinate, yCoordinate);
-
         }
         //==============================================================================================================
         //draw alu =====================================================================================================
@@ -77,10 +79,8 @@ public class ComponentBuilder {
             StackPane aluStack = new StackPane();
             aluStack.getChildren().addAll(aluRectangle, aluText);
             gridPane.add(aluStack, xCoordinate, yCoordinate);
-
         }
-
-        //draw ALU connection to IR
+        //draw ALU connection to tr(ir)
         if (componentChoice.equals("aluTrConnection")) {
             //connection to tr
             Rectangle cornerUp = new Rectangle(cellDimension, cellDimension / 2, 0.2 * cellDimension, cellDimension * 0.605);
@@ -108,11 +108,14 @@ public class ComponentBuilder {
                         i, 7);
             }
         }
+        //==============================================================================================================
     }
 
+    //depending on the current cycle, different elements are being active in the grid
+    //since all the instructions have the same fetch phase, it is being executed here, while the execute
+    //phases are being executed in the individual classes of the instructions
     public static void redrawActiveElementsFetchPhase() {
         //1. MAR <- PC
-        //epc
         if (CycleHandler.getInstance().getCurrentCycle() == 1) {
             //epc
             Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus");
@@ -121,16 +124,15 @@ public class ComponentBuilder {
             //lmar
             Middle.fillTheGrid(Middle.middleGroup, "pc", "mar", "intbus");
         }
-
         //2. MDR <- M[MAR], read
         if (CycleHandler.getInstance().getCurrentCycle() == 3) {
+            //read
             Middle.fillTheGrid(Middle.middleGroup, "memory");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 4) {
             //lmdr
             Middle.fillTheGrid(Middle.middleGroup, "mdr", "memory");
         }
-
         //3. PC++, IR <- MDR{31:28}
         if (CycleHandler.getInstance().getCurrentCycle() == 5) {
             //inc, emdr
@@ -142,7 +144,7 @@ public class ComponentBuilder {
         }
         //4. decode
         if (CycleHandler.getInstance().getCurrentCycle() == 7) {
-            //nothing
+            //nothing is active during the decoding
             Middle.fillTheGrid(Middle.middleGroup);
         }
     }
