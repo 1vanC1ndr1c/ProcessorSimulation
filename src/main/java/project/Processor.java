@@ -4,8 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import project.data.MemoryLoader;
 
+import project.data.MemoryLoader;
 import project.gui.bottom.Bottom;
 import project.gui.leftSide.LeftSide;
 import project.gui.middle.Middle;
@@ -21,16 +21,14 @@ public class Processor extends Application {
         launch(args);
     }
 
-
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         MemoryLoader.loadData();
 
-        primaryStage.setTitle("gui");
+        primaryStage.setTitle("Processor Simulation Application");
 
         BorderPane border = new BorderPane();
-
 
         LeftSide.set(border);
         RightSide.set(border);
@@ -38,13 +36,13 @@ public class Processor extends Application {
         Top.set(border);
         Bottom.set(border);
 
-
         Scene scene = new Scene(border, 1600, 1000);
+
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
 
         primaryStage.show();
     }
-
 
     public static void pickInstruction() {
 

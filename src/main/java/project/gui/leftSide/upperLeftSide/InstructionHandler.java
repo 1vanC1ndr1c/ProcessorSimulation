@@ -3,8 +3,8 @@ package project.gui.leftSide.upperLeftSide;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import project.gui.leftSide.lowerLeftSide.CycleHandler;
-import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
+import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
 import project.gui.rightSide.UpperRightSide;
 import project.gui.validation.Validator;
@@ -76,8 +76,8 @@ public class InstructionHandler {
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
 
         //instruction started, enable "next" and "prev" buttons
-        LowerLeftSide.buttonNext.setDisable(false);
-        LowerLeftSide.prevButton.setDisable(false);
+        MiddleLeftSide.buttonNext.setDisable(false);
+        MiddleLeftSide.prevButton.setDisable(false);
 
         //reset the current cycle button
         CycleHandler.getInstance().setCurrentCycle(0);

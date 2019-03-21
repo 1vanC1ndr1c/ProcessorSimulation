@@ -18,7 +18,7 @@ public class UpperLeftSide {
         upperLeftSideBox.setPadding(new Insets(0.0, 10.0, 10.0, 10.0));
 
         //title
-        Text leftText = new Text("Instructions       Location ");
+        Text leftText = new Text("Instructions               Location ");
         upperLeftSideBox.getChildren().add(leftText);
 
         GridPane instructionsGridPane = new GridPane();

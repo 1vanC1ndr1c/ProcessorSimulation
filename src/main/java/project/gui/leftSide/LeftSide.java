@@ -4,11 +4,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
+import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.leftSide.upperLeftSide.UpperLeftSide;
+import project.gui.validation.Validator;
 
 /**
  * This class is used to draw the left side of the gui.
- *
+ * <p>
  * On the left side, there are instructions that can be chosen to run,
  * and 'next' and 'prev' button to see the effect of those instructions
  * on processor components as the instruction is being fetched and executed
@@ -22,9 +24,10 @@ public class LeftSide {
         leftBox.setStyle("-fx-border-color: black");
 
         VBox upperLeftSideBox = UpperLeftSide.set(borderPane);
+        VBox middleLeftSideBox = MiddleLeftSide.set(borderPane);
         VBox lowerLeftSideBox = LowerLeftSide.set(borderPane);
 
-        leftBox.getChildren().addAll(upperLeftSideBox, lowerLeftSideBox);
+        leftBox.getChildren().addAll(upperLeftSideBox, middleLeftSideBox, lowerLeftSideBox);
 
         borderPane.setLeft(leftBox);
     }

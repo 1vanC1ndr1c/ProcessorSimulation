@@ -1,92 +1,106 @@
 package project.gui.leftSide.lowerLeftSide;
 
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import project.gui.bottom.Bottom;
-import project.gui.bottom.ComponentValuesContainer;
-import project.gui.middle.Middle;
-import project.model.processor.behavior.Execute;
-import project.model.processor.behavior.Fetch;
+import lombok.Data;
+import project.gui.leftSide.middleLeftSide.CycleHandler;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 
-/**
- * Class that is used to draw the 'next' and 'prev' buttons into gui.
- */
-
+@Data
 public class LowerLeftSide {
 
-    //cycle switching buttons, need to be public because they are disabled until an instruction is picked
-    public static Button buttonNext = new Button("Next");
-    public static Button prevButton = new Button("Prev.");
+    private static Map<Integer, String> operationsMap = new LinkedHashMap<>();
 
+    public static VBox lowerLeftSideBox = new VBox();
+
+    private static LowerLeftSide LOWER_LEFT_SIDE = new LowerLeftSide();
+
+    public static LowerLeftSide getInstance() {
+        return LOWER_LEFT_SIDE;
+    }
 
     public static VBox set(BorderPane borderPane) {
-
-        VBox lowerLeftSideBox = new VBox();
         lowerLeftSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
         lowerLeftSideBox.setStyle("-fx-border-color: black");
-        lowerLeftSideBox.setPadding(new Insets(0.0, 10.0, 10.0, 10.0));
+        lowerLeftSideBox.setPadding(new Insets(10.0, 10.0, 10.0, 10.0));
+        lowerLeftSideBox = setActiveOperations(lowerLeftSideBox);
+        return lowerLeftSideBox;
+    }
 
-        //title
-        Text text = new Text("Cycles");
+    public static VBox setActiveOperations(VBox lowerLeftSideBox) {
 
-        //'next' button ================================================================================================
-        buttonNext = new Button("Next");
-        buttonNext.setOnAction(e -> {
-            //save current values
-            ComponentValuesContainer.getInstance().saveCurrentComponentValues();
-            //get the current cycle number and save the incremented value
-            Integer currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
-            CycleHandler.getInstance().setCurrentCycle(currCycle);
-            //do the proper instructions for a cycle
-            if (currCycle < 8) Fetch.getInstance().fetch();
-            if (currCycle >= 8) Execute.getInstance().execute();
-            //draw the results
-            Bottom.set(borderPane);
-        });
-        //==============================================================================================================
+        lowerLeftSideBox.getChildren().clear();
 
-        //prev button ==================================================================================================
-        prevButton = new Button("Prev.");
-        prevButton.setOnAction(e -> {
-            //remove current values
-            if (CycleHandler.getInstance().getCurrentCycle() > 1) {
-                ComponentValuesContainer.getInstance().removeCurrentComponentValues();
-            }
-            if (CycleHandler.getInstance().getCurrentCycle() > 1) {
-                ComponentValuesContainer.getInstance().setNewComponentValues();
-            }
-            //get the current cycle number and save the decremented value
-            Integer currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
-            CycleHandler.getInstance().setCurrentCycle(currCycle);
-            //do the proper instructions for a cycle
-            if (currCycle < 8) Fetch.getInstance().fetch();
-            if (currCycle >= 8) Execute.getInstance().execute();
-            if (currCycle <= 0) {
-                ComponentValuesContainer.getInstance().removeCurrentComponentValues();
-                CycleHandler.getInstance().setCurrentCycle(0);
-                Middle.fillTheGrid(Middle.middleGroup);
-            }
-            //draw the results
-            Bottom.set(borderPane);
-        });
-        //==============================================================================================================
+        Integer currCycle = CycleHandler.getInstance().getCurrentCycle();
 
-        //disable the buttons until an instruction is picked
-        buttonNext.setDisable(true);
-        prevButton.setDisable(true);
+        if (currCycle < 8 && currCycle >= 0) {
+            activeOperationsFetchPhase();
+        }
 
-        //box that holds the buttons
-        HBox buttonBox = new HBox();
-        buttonBox.getChildren().addAll(prevButton, new Text(" "), buttonNext);
+        for (Integer i = 1; i <= currCycle; i++) {
+            lowerLeftSideBox.getChildren().add(new Text(("#" + i.toString() + ": " + operationsMap.get(i))));
+        }
 
-        lowerLeftSideBox.getChildren().add(text);
-        lowerLeftSideBox.getChildren().add(buttonBox);
 
         return lowerLeftSideBox;
+    }
+
+    //depending on the current cycle, different elements are being active in the grid
+    //since all the instructions have the same fetch phase, it is being executed here, while the execute
+    //phases are being executed in the individual classes of the instructions
+    public static void activeOperationsFetchPhase() {
+
+        String activeOperationsString = "";
+        List<String> activeOperations = new ArrayList<>();
+
+        if (CycleHandler.getInstance().getCurrentCycle() == 1) {
+            activeOperations.add("1. MAR <- PC");
+            activeOperations.add("epc");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 2) {
+            activeOperations.add("1. MAR <- PC");
+            activeOperations.add("epc");
+            activeOperations.add("lmar");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 3) {
+            activeOperations.add("2. MDR <- M[MAR]");
+            activeOperations.add("read");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 4) {
+            activeOperations.add("2. MDR <- M[MAR]");
+            activeOperations.add("read");
+            activeOperations.add("lmdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
+            activeOperations.add("3. PC++, IR <- MDR{31:28}");
+            activeOperations.add("inc");
+            activeOperations.add("emdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 6) {
+            activeOperations.add("3. PC++, IR <- MDR{31:28}");
+            activeOperations.add("emdr");
+            activeOperations.add("lir");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 7) {
+            activeOperations.add("4. *decoding*");
+        }
+
+        if (CycleHandler.getInstance().getCurrentCycle() < 8 && CycleHandler.getInstance().getCurrentCycle() > 0) {
+
+            for (String s : activeOperations) {
+                activeOperationsString = activeOperationsString + s + ", ";
+            }
+            //remove the last ','
+            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+
+            operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
+        }
     }
 }

@@ -6,7 +6,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import project.gui.leftSide.lowerLeftSide.CycleHandler;
+import project.gui.leftSide.middleLeftSide.CycleHandler;
 
 /**
  * This class is used to draw the bottom portion of the gui.

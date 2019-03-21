@@ -2,7 +2,7 @@ package project.model.processor.behavior;
 
 
 import lombok.Data;
-import project.gui.leftSide.lowerLeftSide.CycleHandler;
+import project.gui.leftSide.middleLeftSide.CycleHandler;
 import project.gui.middle.ComponentBuilder;
 import project.instructions.*;
 import project.model.processor.*;

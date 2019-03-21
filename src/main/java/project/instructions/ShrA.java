@@ -2,7 +2,7 @@ package project.instructions;
 
 
 import lombok.Data;
-import project.gui.leftSide.lowerLeftSide.CycleHandler;
+import project.gui.leftSide.middleLeftSide.CycleHandler;
 import project.gui.middle.Middle;
 import project.model.processor.behavior.signals.SHR;
 
