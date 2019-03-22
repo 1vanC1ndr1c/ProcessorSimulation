@@ -14,7 +14,7 @@ import project.model.processor.*;
 /**
  * Class that puts component names and their values next to them
  * into a grid.
- *
+ * <p>
  * It also gives the feature to change and submit said values.
  */
 
@@ -56,10 +56,12 @@ public class UpperRightSide {
 
         return upperRightSideBOx;
     }
-
-
-
+    
     public static void loadComponents(GridPane componentsGridPane) {
+
+        //clear previous component values and names
+        //without this, component names, although the same, would overlap and look thicker
+        componentsGridPane.getChildren().clear();
 
         //list of components and their values===========================================================================
 
