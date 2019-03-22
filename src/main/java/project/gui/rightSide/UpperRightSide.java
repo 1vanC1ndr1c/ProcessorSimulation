@@ -56,7 +56,7 @@ public class UpperRightSide {
 
         return upperRightSideBOx;
     }
-    
+
     public static void loadComponents(GridPane componentsGridPane) {
 
         //clear previous component values and names
