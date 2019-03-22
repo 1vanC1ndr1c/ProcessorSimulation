@@ -1,9 +1,14 @@
 package project.instructions;
 
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.middle.Middle;
 import project.model.processor.behavior.signals.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 public final class AddA implements BaseInstruction {
@@ -38,6 +43,7 @@ public final class AddA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 17) CycleHandler.getInstance().setCurrentCycle(16);
 
         drawActiveElements();
+        activeOperationsExecutePhase();
     }
 
     @SuppressWarnings("Duplicates")
@@ -80,6 +86,61 @@ public final class AddA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 16) {
             //instruction complete, no active elements
             Middle.fillTheGrid(Middle.middleGroup);
+        }
+    }
+
+    @SuppressWarnings("Duplicates")
+    public static void activeOperationsExecutePhase() {
+
+        String activeOperationsString = "";
+        List<String> activeOperations = new ArrayList<>();
+
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+            activeOperations.add("1. MAR <- MDR[23:0}");
+            activeOperations.add("emdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+            activeOperations.add("1. MAR <- MDR[23:0}");
+            activeOperations.add("emdr");
+            activeOperations.add("lmar");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 10) {
+            activeOperations.add("2. MDR <- M[MAR]");
+            activeOperations.add("read");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 11) {
+            activeOperations.add("2. MDR <- M[MAR]");
+            activeOperations.add("read");
+            activeOperations.add("lmdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 12) {
+            activeOperations.add("3. A <- A + MDR");
+            activeOperations.add("emdr");
+            activeOperations.add("add");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 13) {
+            activeOperations.add("3. A <- A + MDR");
+            activeOperations.add("emdr");
+            activeOperations.add("add");
+            activeOperations.add("lalu");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 14) {
+            activeOperations.add("3. A <- A + MDR");
+            activeOperations.add("ealu");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 15) {
+            activeOperations.add("3. A <- A + MDR");
+            activeOperations.add("ealu");
+            activeOperations.add("la");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() < 16) {
+            for (String s : activeOperations) {
+                activeOperationsString = activeOperationsString + s + ", ";
+            }
+            //remove the last ','
+            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+
+            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }
     }
 }

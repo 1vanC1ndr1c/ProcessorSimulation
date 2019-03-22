@@ -16,7 +16,7 @@ import java.util.Map;
 @Data
 public class LowerLeftSide {
 
-    private static Map<Integer, String> operationsMap = new LinkedHashMap<>();
+    public static Map<Integer, String> operationsMap = new LinkedHashMap<>();
 
     public static VBox lowerLeftSideBox = new VBox();
 
@@ -30,12 +30,11 @@ public class LowerLeftSide {
         lowerLeftSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
         lowerLeftSideBox.setStyle("-fx-border-color: black");
         lowerLeftSideBox.setPadding(new Insets(10.0, 10.0, 10.0, 10.0));
-        lowerLeftSideBox = setActiveOperations(lowerLeftSideBox);
+        setActiveOperations();
         return lowerLeftSideBox;
     }
 
-    public static VBox setActiveOperations(VBox lowerLeftSideBox) {
-
+    public static void setActiveOperations() {
         lowerLeftSideBox.getChildren().clear();
 
         Integer currCycle = CycleHandler.getInstance().getCurrentCycle();
@@ -45,11 +44,12 @@ public class LowerLeftSide {
         }
 
         for (Integer i = 1; i <= currCycle; i++) {
-            lowerLeftSideBox.getChildren().add(new Text(("#" + i.toString() + ": " + operationsMap.get(i))));
+            if (operationsMap.get(i) != null) {
+                lowerLeftSideBox.getChildren().add(new Text(("#" + i.toString() + ": " + operationsMap.get(i))));
+            }
         }
 
 
-        return lowerLeftSideBox;
     }
 
     //depending on the current cycle, different elements are being active in the grid

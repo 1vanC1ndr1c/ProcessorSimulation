@@ -1,9 +1,13 @@
 package project.instructions;
 
 import lombok.Data;
+import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.leftSide.middleLeftSide.CycleHandler;
 import project.gui.middle.Middle;
 import project.model.processor.behavior.signals.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 public class StA implements BaseInstruction {
@@ -32,8 +36,8 @@ public class StA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 15) CycleHandler.getInstance().setCurrentCycle(14);
 
         drawActiveElements();
+        activeOperationsExecutePhase();
     }
-
 
     private void drawActiveElements() {
         //1. MAR <- MDR[23:0}
@@ -66,6 +70,49 @@ public class StA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 14) {
             //write
             Middle.fillTheGrid(Middle.middleGroup);
+        }
+    }
+
+    @SuppressWarnings("Duplicates")
+    public static void activeOperationsExecutePhase() {
+
+        String activeOperationsString = "";
+        List<String> activeOperations = new ArrayList<>();
+
+        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+            activeOperations.add("1. MAR <- MDR[23:0}");
+            activeOperations.add("emdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+            activeOperations.add("1. MAR <- MDR[23:0}");
+            activeOperations.add("emdr");
+            activeOperations.add("lmar");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 10) {
+            activeOperations.add("2. MDR <- A");
+            activeOperations.add("ea");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 11) {
+            activeOperations.add("2. MDR <- A");
+            activeOperations.add("ea");
+            activeOperations.add("lmdr");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 12) {
+            activeOperations.add("3. M[MAR] <- MDR");
+            activeOperations.add("write");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() == 13) {
+            activeOperations.add("3. M[MAR] <- MDR");
+            activeOperations.add("write");
+        }
+        if (CycleHandler.getInstance().getCurrentCycle() < 14) {
+            for (String s : activeOperations) {
+                activeOperationsString = activeOperationsString + s + ", ";
+            }
+            //remove the last ','
+            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+
+            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }
     }
 }

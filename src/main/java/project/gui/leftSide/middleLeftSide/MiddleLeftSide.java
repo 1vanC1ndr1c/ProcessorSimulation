@@ -53,7 +53,7 @@ public class MiddleLeftSide {
             Bottom.set(borderPane);
             //update component values
             UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
-            LowerLeftSide.setActiveOperations(LowerLeftSide.lowerLeftSideBox);
+            LowerLeftSide.setActiveOperations();
         });
         //==============================================================================================================
 
@@ -73,7 +73,6 @@ public class MiddleLeftSide {
             //do the proper instructions for a cycle
             if (currCycle < 8) {
                 Fetch.getInstance().fetch();
-                LowerLeftSide.setActiveOperations(LowerLeftSide.lowerLeftSideBox);
             }
             if (currCycle >= 8) Execute.getInstance().execute();
             if (currCycle <= 0) {
@@ -85,7 +84,7 @@ public class MiddleLeftSide {
             Bottom.set(borderPane);
             //update component values
             UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
-            LowerLeftSide.setActiveOperations(LowerLeftSide.lowerLeftSideBox);
+            LowerLeftSide.setActiveOperations();
         });
         //==============================================================================================================
 
