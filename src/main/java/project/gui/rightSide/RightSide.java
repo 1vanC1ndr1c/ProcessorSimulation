@@ -17,7 +17,7 @@ public class RightSide {
         VBox memory = LowerRightSide.set(borderPane);                   //box for the lower side
 
         //set scaling
-        rightSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.18));
+        rightSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.12));
         rightSideBox.setStyle("-fx-border-color: black");               //set border color
 
         rightSideBox.getChildren().add(components);                     //add upper side into the right side box

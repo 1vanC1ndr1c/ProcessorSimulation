@@ -3,7 +3,6 @@ package project.instructions;
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.leftSide.middleLeftSide.CycleHandler;
-import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.middle.Middle;
 import project.model.processor.behavior.signals.*;
 

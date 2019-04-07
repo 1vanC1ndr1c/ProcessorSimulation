@@ -36,10 +36,10 @@ public class Processor extends Application {
         Top.set(border);
         Bottom.set(border);
 
-        Scene scene = new Scene(border, 1600, 1000);
+        Scene scene = new Scene(border, 1920, 1080);
 
         primaryStage.setScene(scene);
-        primaryStage.setMaximized(true);
+
 
         primaryStage.show();
     }

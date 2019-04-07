@@ -68,49 +68,49 @@ public class UpperRightSide {
         //acc
         Text accumulatorText = new Text(" ACC: ");                                          //component name
         TextField accValue = new TextField(Accumulator.getInstance().getValue());           //component value
-        accValue.setPrefWidth(80);                                                          //value box width
+        accValue.setPrefWidth(85);                                                          //value box width
         componentsGridPane.add(accumulatorText, 0, 0);                 //add value and name into...
         componentsGridPane.add(accValue, 1, 0);                        //the grid
         //alu
         Text ALUText = new Text(" ALU: ");
         TextField ALUValue = new TextField(ALU.getInstance().getValue());
-        ALUValue.setPrefWidth(80);
+        ALUValue.setPrefWidth(85);
         componentsGridPane.add(ALUText, 0, 1);
         componentsGridPane.add(ALUValue, 1, 1);
         //ir
         Text instructionRegisterText = new Text(" InstReg: ");
         TextField instructionRegisterValue = new TextField(InstructionRegister.getInstance().getValue());
-        instructionRegisterValue.setPrefWidth(80);
+        instructionRegisterValue.setPrefWidth(85);
         componentsGridPane.add(instructionRegisterText, 0, 2);
         componentsGridPane.add(instructionRegisterValue, 1, 2);
         //intbus
         Text intBusText = new Text(" IntBUs: ");
         TextField intBusValue = new TextField(InternalBus.getInstance().getValue());
-        intBusValue.setPrefWidth(80);
+        intBusValue.setPrefWidth(85);
         componentsGridPane.add(intBusText, 0, 3);
         componentsGridPane.add(intBusValue, 1, 3);
         //mar
         Text MARText = new Text(" MAR: ");
         TextField MARValue = new TextField(MemoryAddressRegister.getInstance().getValue());
-        MARValue.setPrefWidth(80);
+        MARValue.setPrefWidth(85);
         componentsGridPane.add(MARText, 0, 4);
         componentsGridPane.add(MARValue, 1, 4);
         //mdr
         Text MDRText = new Text(" MDR: ");
         TextField MDRValue = new TextField(MemoryDataRegister.getInstance().getValue());
-        MDRValue.setPrefWidth(80);
+        MDRValue.setPrefWidth(85);
         componentsGridPane.add(MDRText, 0, 5);
         componentsGridPane.add(MDRValue, 1, 5);
         //pc
         Text PCText = new Text(" PC: ");
         TextField PCValue = new TextField(ProgramCounter.getInstance().getValue());
-        PCValue.setPrefWidth(80);
+        PCValue.setPrefWidth(85);
         componentsGridPane.add(PCText, 0, 6);
         componentsGridPane.add(PCValue, 1, 6);
         //tr
         Text TRText = new Text(" TR: ");
         TextField TRValue = new TextField(TemporaryRegister.getInstance().getValue());
-        TRValue.setPrefWidth(80);
+        TRValue.setPrefWidth(85);
         componentsGridPane.add(TRText, 0, 7);
         componentsGridPane.add(TRValue, 1, 7);
         //==============================================================================================================

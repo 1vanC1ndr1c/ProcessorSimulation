@@ -47,7 +47,7 @@ public class ComponentBuilder {
         //==============================================================================================================
         //draw the component ===========================================================================================
         if (componentChoice.equals("else") || componentChoice.equals("memory")) {
-            Rectangle component = new Rectangle(cellDimension, cellDimension);
+            Rectangle component = new Rectangle(cellDimension*1.3, cellDimension);
             component.setFill(componentColor);
             component.setStroke(Color.BLACK);
             Text componentText = new Text(componentName);
@@ -86,7 +86,7 @@ public class ComponentBuilder {
             Rectangle cornerUp = new Rectangle(cellDimension, cellDimension / 2, 0.2 * cellDimension, cellDimension * 0.605);
             cornerUp.setFill(componentColor);
             cornerUp.setStroke(Color.BLACK);
-            Rectangle cornerLeft = new Rectangle(0, cellDimension / 2, cellDimension * 0.65, cellDimension * 0.2);
+            Rectangle cornerLeft = new Rectangle(0, cellDimension / 2, cellDimension * 0.76, cellDimension * 0.2);
             cornerLeft.setFill(componentColor);
             cornerLeft.setStroke(Color.BLACK);
 

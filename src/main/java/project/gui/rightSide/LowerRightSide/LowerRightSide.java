@@ -27,13 +27,13 @@ public class LowerRightSide {
 
         //lower right side box and it's scaling and border color set
         VBox lowerRightSideVBox = new VBox();
-        lowerRightSideVBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
         lowerRightSideVBox.setStyle("-fx-border-color: black");
 
         //grid which will hold the memory location and memory values
         memoryGridPane.setHgap(30);
-        memoryGridPane.setPrefWidth(150);
+        memoryGridPane.setPrefWidth(180);
         memoryGridPane.setPadding(new Insets(0, 0, 0, 5));
+
 
         //titles of the lower box
         Text memoryHeader = new Text(" Memory");
