@@ -9,19 +9,8 @@
     <list default="true" id="c3152b84-1f6b-453a-8762-40d1d581199f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/Processor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/leftSide/upperLeftSide/UpperLeftSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/leftSide/upperLeftSide/UpperLeftSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/middle/ComponentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/middle/ComponentBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/rightSide/LowerRightSide/LowerRightSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/rightSide/LowerRightSide/LowerRightSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/rightSide/RightSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/rightSide/RightSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/rightSide/UpperRightSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/rightSide/UpperRightSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/instructions/AddA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/instructions/AddA.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,43 +23,43 @@
     <session id="1248389291">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.35" value="2" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="149" />
+          <entry key="java" value="153" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="149" />
+          <entry key="JAVA" value="153" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="java" value="7265" />
+          <entry key="java" value="7292" />
           <entry key="txt" value="37" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7265" />
+          <entry key="JAVA" value="7292" />
           <entry key="PLAIN_TEXT" value="51" />
           <entry key="XML" value="21" />
         </counts>
@@ -82,17 +71,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="476">
+              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+            <state relative-caret-position="340">
+              <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -102,33 +91,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="29" column="63" lean-forward="true" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/MemorySubmitButtonHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -178,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" />
       </list>
@@ -228,6 +190,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,7 +315,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,18 +390,20 @@
       <workItem from="1553266764456" duration="59000" />
       <workItem from="1553275731579" duration="599000" />
       <workItem from="1553689220090" duration="704000" />
-      <workItem from="1554639270057" duration="2552000" />
+      <workItem from="1554639270057" duration="3172000" />
+      <workItem from="1554752579702" duration="323000" />
+      <workItem from="1554812643540" duration="452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36008000" />
+    <option name="totallyTimeSpent" value="37403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25183374" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25794622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -689,24 +653,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="476">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/MemorySubmitButtonHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -717,17 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/MemorySubmitButtonHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="29" column="63" lean-forward="true" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
+        <state relative-caret-position="340">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
         </state>
       </provider>
     </entry>

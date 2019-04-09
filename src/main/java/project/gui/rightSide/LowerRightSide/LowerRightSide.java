@@ -30,8 +30,8 @@ public class LowerRightSide {
         lowerRightSideVBox.setStyle("-fx-border-color: black");
 
         //grid which will hold the memory location and memory values
-        memoryGridPane.setHgap(30);
-        memoryGridPane.setPrefWidth(180);
+        memoryGridPane.setHgap(15);
+        memoryGridPane.setPrefWidth(130);
         memoryGridPane.setPadding(new Insets(0, 0, 0, 5));
 
 

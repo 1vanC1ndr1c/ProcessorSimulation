@@ -36,7 +36,7 @@ public class Processor extends Application {
         Top.set(border);
         Bottom.set(border);
 
-        Scene scene = new Scene(border, 1920, 1080);
+        Scene scene = new Scene(border, 1280, 720);
 
         primaryStage.setScene(scene);
 
