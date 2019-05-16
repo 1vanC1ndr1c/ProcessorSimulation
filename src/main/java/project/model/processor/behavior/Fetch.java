@@ -23,9 +23,9 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
 
     public void fetch() {
 
-        if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
-        if (CycleHandler.getInstance().getCurrentCycle() == 1)
-            System.out.println("FETCH PHASE:========================================");
+//        if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
+//        if (CycleHandler.getInstance().getCurrentCycle() == 1)
+//            System.out.println("FETCH PHASE:========================================");
 
         //1. MAR <- PC
         if (CycleHandler.getInstance().getCurrentCycle() == 1) EPC.getInstance().signal();
@@ -46,8 +46,8 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
         //4. decode
         if (CycleHandler.getInstance().getCurrentCycle() == 7)
             decodeInstruction(InstructionRegister.getInstance().getValue());
-        if (CycleHandler.getInstance().getCurrentCycle() == 7)
-            System.out.println("END FETCH ==========================================");
+//        if (CycleHandler.getInstance().getCurrentCycle() == 7)
+//            System.out.println("END FETCH ==========================================");
 
         ComponentBuilder.redrawActiveElementsFetchPhase();
     }
@@ -57,8 +57,8 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
         //if the data in the memory is M1M2M3M4M5M6M7
         //then the opcode is the M1, M2 is irrelevant, and the rest
         //is data of the instruction
-        System.out.println("            ***Instruction decoding***");
-        System.out.println("            ========================================");
+//        System.out.println("            ***Instruction decoding***");
+//        System.out.println("            ========================================");
         switch (opCode) {
             case "1": //adda.opcode = HEX(1)
                 decodedInstruction = (T) AddA.getInstance();

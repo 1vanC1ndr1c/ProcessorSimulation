@@ -1,5 +1,6 @@
 package project.gui.leftSide;
 
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -27,7 +28,12 @@ public class LeftSide {
         VBox middleLeftSideBox = MiddleLeftSide.set(borderPane);
         VBox lowerLeftSideBox = LowerLeftSide.set(borderPane);
 
-        leftBox.getChildren().addAll(upperLeftSideBox, middleLeftSideBox, lowerLeftSideBox);
+        //add a scroll pane to the cycles
+        ScrollPane scrollPane = new ScrollPane(lowerLeftSideBox);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
+
+        leftBox.getChildren().addAll(upperLeftSideBox, middleLeftSideBox, lowerLeftSideBox, scrollPane);
 
         borderPane.setLeft(leftBox);
     }

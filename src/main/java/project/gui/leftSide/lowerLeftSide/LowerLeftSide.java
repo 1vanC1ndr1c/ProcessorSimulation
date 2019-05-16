@@ -1,6 +1,7 @@
 package project.gui.leftSide.lowerLeftSide;
 
 import javafx.geometry.Insets;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -31,6 +32,11 @@ public class LowerLeftSide {
         lowerLeftSideBox.setStyle("-fx-border-color: black");
         lowerLeftSideBox.setPadding(new Insets(10.0, 10.0, 10.0, 10.0));
         setActiveOperations();
+//        lowerLeftSideBox.setStyle("-fx-font: 12 arial;");
+
+
+
+
         return lowerLeftSideBox;
     }
 
