@@ -33,17 +33,12 @@ public class Middle {
         //method that draws all the components
         fillTheGrid(middleGroup);
 
-        //add a scroll pane to the cycles
-        ScrollPane scrollPane = new ScrollPane(middleGroup);
-        scrollPane.setFitToHeight(true);
-        scrollPane.setFitToWidth(true);
-
         VBox middleBox = new VBox();
         middleBox.setStyle("-fx-border-color: black");
         middleBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
         middleBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.68));
         middleBox.setMinSize(400.0, 400.0);
-        middleBox.getChildren().addAll(middleGroup, scrollPane);
+        middleBox.getChildren().addAll(middleGroup);
 
         //when resizing, adjust the graphical elements
         middleGroup.widthProperty().addListener(observable -> resize(middleBox, borderPane, middleGroup));

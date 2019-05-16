@@ -2,7 +2,7 @@ package project.instructions;
 
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 import project.gui.middle.Middle;
 import project.model.processor.behavior.signals.*;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public final class AndA implements BaseInstruction {
 
-    Integer noOfCycles = 0;
+    Integer noOfCycles = 15;
 
     private static final AndA AND_A = new AndA();
 

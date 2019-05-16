@@ -6,7 +6,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import lombok.Data;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

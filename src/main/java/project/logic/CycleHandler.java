@@ -1,4 +1,4 @@
-package project.gui.leftSide.middleLeftSide;
+package project.logic;
 
 import lombok.Data;
 

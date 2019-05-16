@@ -1,7 +1,7 @@
 package project.gui.bottom;
 
 import lombok.Data;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 import project.model.processor.*;
 
 import java.util.*;

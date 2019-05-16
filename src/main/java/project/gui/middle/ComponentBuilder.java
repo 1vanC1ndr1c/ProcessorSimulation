@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 
 /**
  * Class that is used to build a component and show it in the

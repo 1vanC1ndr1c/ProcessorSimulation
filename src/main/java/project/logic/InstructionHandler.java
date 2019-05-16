@@ -1,9 +1,9 @@
-package project.gui.leftSide.upperLeftSide;
+package project.logic;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
 import project.gui.rightSide.UpperRightSide;
@@ -78,7 +78,7 @@ public class InstructionHandler {
         //instruction started, enable "next" and "prev" buttons
         MiddleLeftSide.buttonNext.setDisable(false);
         MiddleLeftSide.prevButton.setDisable(false);
-
+        MiddleLeftSide.fetchAndExecuteButton.setDisable(false);
         //reset the current cycle button
         CycleHandler.getInstance().setCurrentCycle(0);
     }

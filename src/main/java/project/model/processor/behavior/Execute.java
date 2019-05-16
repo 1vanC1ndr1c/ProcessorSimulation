@@ -1,7 +1,7 @@
 package project.model.processor.behavior;
 
 import lombok.Data;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 
 @Data
 public final class Execute {

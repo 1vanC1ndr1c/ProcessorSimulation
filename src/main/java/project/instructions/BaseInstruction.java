@@ -6,4 +6,6 @@ public interface BaseInstruction {
     String opCode = "0";
 
     void execute();
+
+    Integer getNoOfCycles();
 }

@@ -5,6 +5,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import project.logic.InstructionHandler;
 
 /**
  * Class that draws the upper left side of gui, where instructions are being picked and ran.

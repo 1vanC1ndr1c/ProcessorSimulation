@@ -11,6 +11,7 @@ import project.gui.bottom.ComponentValuesContainer;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.middle.Middle;
 import project.gui.rightSide.UpperRightSide;
+import project.logic.CycleHandler;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
@@ -23,6 +24,7 @@ public class MiddleLeftSide {
     //cycle switching buttons, need to be public because they are disabled until an instruction is picked
     public static Button buttonNext = new Button("Next");
     public static Button prevButton = new Button("Prev.");
+    public static Button fetchAndExecuteButton = new Button("Fetch and Execute");
 
 
     public static VBox set(BorderPane borderPane) {
@@ -38,22 +40,7 @@ public class MiddleLeftSide {
         //'next' button ================================================================================================
         buttonNext = new Button("Next");
         buttonNext.setOnAction(e -> {
-
-            //save current values
-            ComponentValuesContainer.getInstance().saveCurrentComponentValues();
-            //get the current cycle number and save the incremented value
-            Integer currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
-            CycleHandler.getInstance().setCurrentCycle(currCycle);
-            //do the proper instructions for a cycle
-            if (currCycle < 8) {
-                Fetch.getInstance().fetch();
-            }
-            if (currCycle >= 8) Execute.getInstance().execute();
-            //draw the results
-            Bottom.set(borderPane);
-            //update component values
-            UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
-            LowerLeftSide.setActiveOperations();
+            buttonNextOperation(borderPane);
         });
         //==============================================================================================================
 
@@ -88,17 +75,50 @@ public class MiddleLeftSide {
         });
         //==============================================================================================================
 
+
+        //fetch and execute button =====================================================================================
+        fetchAndExecuteButton = new Button("Fetch and Execute");
+        fetchAndExecuteButton.setOnAction(e -> {
+            for (int i = 0; i < 7; i++) {
+                buttonNextOperation(borderPane);
+            }
+            for (int i = 0; i < Fetch.getInstance().getDecodedInstruction().getNoOfCycles(); i++) {
+                buttonNextOperation(borderPane);
+            }
+
+        });
+        //==============================================================================================================
+
         //disable the buttons until an instruction is picked
         buttonNext.setDisable(true);
         prevButton.setDisable(true);
+        fetchAndExecuteButton.setDisable(true);
 
         //box that holds the buttons
         HBox buttonBox = new HBox();
-        buttonBox.getChildren().addAll(prevButton, new Text(" "), buttonNext);
+        buttonBox.getChildren().addAll(prevButton, new Text(" "), buttonNext, new Text(" "), fetchAndExecuteButton);
 
         middleLeftSideBox.getChildren().add(text);
         middleLeftSideBox.getChildren().add(buttonBox);
 
         return middleLeftSideBox;
+    }
+
+    private static void buttonNextOperation(BorderPane borderPane) {
+        //save current values
+        ComponentValuesContainer.getInstance().saveCurrentComponentValues();
+        //get the current cycle number and save the incremented value
+        Integer currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
+        CycleHandler.getInstance().setCurrentCycle(currCycle);
+        //do the proper instructions for a cycle
+        if (currCycle < 8) {
+            Fetch.getInstance().fetch();
+        }
+        if (currCycle >= 8) Execute.getInstance().execute();
+        //draw the results
+        Bottom.set(borderPane);
+        //update component values
+        UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
+        LowerLeftSide.setActiveOperations();
     }
 }

@@ -2,12 +2,11 @@ package project.model.processor.behavior;
 
 
 import lombok.Data;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 import project.gui.middle.ComponentBuilder;
 import project.instructions.*;
 import project.model.processor.*;
 import project.model.processor.behavior.signals.*;
-import project.output.OutputHandler;
 
 @Data
 public final class Fetch<T extends BaseInstruction> extends Thread {

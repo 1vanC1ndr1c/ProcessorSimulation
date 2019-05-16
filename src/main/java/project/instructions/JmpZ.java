@@ -2,7 +2,7 @@ package project.instructions;
 
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
-import project.gui.leftSide.middleLeftSide.CycleHandler;
+import project.logic.CycleHandler;
 import project.gui.middle.Middle;
 import project.model.processor.ConditionChecker;
 import project.model.processor.behavior.signals.EMDR;
@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 public class JmpZ implements BaseInstruction {
 
-    Integer noOfCycles = 9;
+    Integer noOfCycles = 8;
 
     private static final JmpZ JMP_Z = new JmpZ();
 
@@ -68,12 +68,14 @@ public class JmpZ implements BaseInstruction {
         List<String> activeOperations = new ArrayList<>();
 
         if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+            JmpZ.getInstance().setNoOfCycles(8);
             activeOperations.add("1. PC <- MDR [23:0] (if A = 0)");
             if (ConditionChecker.getInstance().checkAccumulator()) activeOperations.add("emdr");
             else activeOperations.add("A != 0. No jump!");
         }
         if (CycleHandler.getInstance().getCurrentCycle() == 9) {
             if (ConditionChecker.getInstance().checkAccumulator()) {
+                JmpZ.getInstance().setNoOfCycles(9);
                 activeOperations.add("1. PC <- MDR [23:0] (if A = 0)");
                 activeOperations.add("emdr");
                 activeOperations.add("lpc");
