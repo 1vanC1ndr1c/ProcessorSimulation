@@ -1,8 +1,10 @@
 package project.gui.bottom;
 
 import javafx.geometry.Insets;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -15,15 +17,10 @@ import project.gui.leftSide.middleLeftSide.CycleHandler;
 
 public class Bottom {
 
+
     private static GridPane bottomGrid = new GridPane();
 
     public static void set(BorderPane borderPane) {
-
-        bottomGrid.setStyle("-fx-border-color: black");
-        bottomGrid.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.75));
-        bottomGrid.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.10));
-        bottomGrid.setMaxHeight(200);
-        bottomGrid.setPadding(new Insets(0.0, 0.0, 0.0, 10.0));
 
         //when resizing, adjust the graphical elements
         bottomGrid.widthProperty().addListener(observable -> resize(bottomGrid, borderPane));
@@ -32,7 +29,21 @@ public class Bottom {
         //method that draws all the components
         fillTheGrid(bottomGrid);
 
-        borderPane.setBottom(bottomGrid);
+        //add a scroll pane to the cycles
+        ScrollPane scrollPane = new ScrollPane(bottomGrid);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
+
+        VBox bottomBox = new VBox();
+
+        bottomBox.getChildren().addAll(bottomGrid, scrollPane);
+        bottomBox.setStyle("-fx-border-color: black");
+        bottomBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.75));
+        bottomBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.10));
+        bottomBox.setMaxHeight(200);
+        bottomBox.setPadding(new Insets(0.0, 0.0, 0.0, 10.0));
+
+        borderPane.setBottom(bottomBox);
     }
 
 

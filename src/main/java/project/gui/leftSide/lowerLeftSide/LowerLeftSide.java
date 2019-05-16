@@ -34,7 +34,9 @@ public class LowerLeftSide {
         setActiveOperations();
 //        lowerLeftSideBox.setStyle("-fx-font: 12 arial;");
 
-
+        //add a scroll pane to the cycles
+        ScrollPane scrollPane = new ScrollPane(lowerLeftSideBox);
+        scrollPane.setFitToHeight(true);
 
 
         return lowerLeftSideBox;
