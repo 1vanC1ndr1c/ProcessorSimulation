@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3152b84-1f6b-453a-8762-40d1d581199f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Processor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/middle/Middle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/middle/Middle.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,27 +41,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="166" />
+          <entry key="java" value="169" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="166" />
+          <entry key="JAVA" value="169" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="java" value="7652" />
+          <entry key="java" value="7837" />
           <entry key="txt" value="37" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7652" />
+          <entry key="JAVA" value="7837" />
           <entry key="PLAIN_TEXT" value="51" />
           <entry key="XML" value="21" />
         </counts>
@@ -98,8 +100,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+            <state relative-caret-position="596">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="796">
+              <caret line="88" column="91" selection-start-line="88" selection-start-column="91" selection-end-line="88" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -182,15 +193,15 @@
         <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/upperLeftSide/UpperLeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/RightSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/top/Top.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Execute.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java" />
       </list>
     </option>
@@ -356,7 +367,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558029814878" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558031415001" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Desktop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -431,12 +442,12 @@
       <workItem from="1554812643540" duration="566000" />
       <workItem from="1556281319729" duration="33000" />
       <workItem from="1556281484936" duration="356000" />
-      <workItem from="1558027319454" duration="2460000" />
+      <workItem from="1558027319454" duration="4070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40366000" />
+    <option name="totallyTimeSpent" value="41976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -451,7 +462,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.66255605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.14013453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -459,7 +470,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50061125" side_tool="true" visible="true" weight="0.66255605" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50061125" side_tool="true" visible="true" weight="0.14013453" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.60650223" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -620,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="88" column="91" selection-start-line="88" selection-start-column="91" selection-end-line="88" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
@@ -638,13 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -700,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -714,10 +704,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/ComponentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="88" column="91" selection-start-line="88" selection-start-column="91" selection-end-line="88" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/beans/InvalidationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/middle/Middle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        <state relative-caret-position="596">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
     </entry>

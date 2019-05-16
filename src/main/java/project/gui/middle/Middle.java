@@ -3,6 +3,7 @@ package project.gui.middle;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -21,11 +22,13 @@ public class Middle {
     public static GridPane middleGroup;
 
     public static void set(BorderPane borderPane) {
+
         middleGroup = new GridPane();
 
-        //when resizing, adjust the graphical elements
-        middleGroup.widthProperty().addListener(observable -> resize(middleGroup, borderPane));
-        middleGroup.heightProperty().addListener(observable -> resize(middleGroup, borderPane));
+        middleGroup.setStyle("-fx-border-color: black");
+        middleGroup.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.68));
+        middleGroup.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.67));
+        middleGroup.setMinSize(400.0, 400.0);
 
         //method that draws all the components
         fillTheGrid(middleGroup);
@@ -38,18 +41,23 @@ public class Middle {
         VBox middleBox = new VBox();
         middleBox.setStyle("-fx-border-color: black");
         middleBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
-        middleBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.70));
+        middleBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.68));
         middleBox.setMinSize(400.0, 400.0);
         middleBox.getChildren().addAll(middleGroup, scrollPane);
 
+        //when resizing, adjust the graphical elements
+        middleGroup.widthProperty().addListener(observable -> resize(middleBox, borderPane, middleGroup));
+        middleGroup.heightProperty().addListener(observable -> resize(middleBox, borderPane, middleGroup));
 
         borderPane.setCenter(middleBox);
     }
 
     //method that deals with grid resizing
-    private static void resize(GridPane gridPane, BorderPane borderPane) {
-        gridPane.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
-        gridPane.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.70));
+    private static void resize(VBox box, BorderPane borderPane, GridPane gridPane) {
+        box.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
+        box.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.68));
+        gridPane.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.68));
+        gridPane.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.67));
         gridPane.getChildren().clear();
         //every resizing requires drawing the elements again
         fillTheGrid(gridPane);

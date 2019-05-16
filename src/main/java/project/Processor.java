@@ -40,7 +40,6 @@ public class Processor extends Application {
 
         primaryStage.setScene(scene);
 
-
         primaryStage.show();
     }
 
