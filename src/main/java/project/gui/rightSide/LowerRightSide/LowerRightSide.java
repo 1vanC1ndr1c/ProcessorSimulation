@@ -10,6 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.model.memory.Memory;
 
 import java.util.Map;
@@ -56,6 +57,10 @@ public class LowerRightSide {
         submitButton.setOnAction(e -> {
             //when the button is used, go and save changes in memory back to the memory java object
             MemorySubmitButtonHandler.handle(memoryGridPane);
+            //assume that an instruction was written into memory and enable cycle buttons
+            MiddleLeftSide.buttonNext.setDisable(false);
+            MiddleLeftSide.prevButton.setDisable(false);
+            MiddleLeftSide.fetchAndExecuteButton.setDisable(false);
         });
 
         //these 3 commands are used to center the submit button into the middle of a line
