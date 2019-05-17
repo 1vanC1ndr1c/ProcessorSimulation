@@ -1,4 +1,4 @@
-package project.logic;
+package project.gui.leftSide.upperLeftSide;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

@@ -6,9 +6,11 @@ import lombok.Data;
 public class CycleHandler {
     private int currentCycle = 0;
 
-    private static CycleHandler ourInstance = new CycleHandler();
+    private int instructionStartCycle = 0;
+
+    private static CycleHandler CYCLE_HANDLER = new CycleHandler();
 
     public static CycleHandler getInstance() {
-        return ourInstance;
+        return CYCLE_HANDLER;
     }
 }

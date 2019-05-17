@@ -22,30 +22,39 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
 
     public void fetch() {
 
-//        if (CycleHandler.getInstance().getCurrentCycle() == 0) OutputHandler.processorOut("Before first fetch", 0);
-//        if (CycleHandler.getInstance().getCurrentCycle() == 1)
+//        if (CycleHandler.getInstance().getCurrentCycle() == 0 + CycleHandler.getInstance().getInstructionStartCycle())
+//              OutputHandler.processorOut("Before first fetch", 0);
+//        if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle())
 //            System.out.println("FETCH PHASE:========================================");
 
         //1. MAR <- PC
-        if (CycleHandler.getInstance().getCurrentCycle() == 1) EPC.getInstance().signal();
-        if (CycleHandler.getInstance().getCurrentCycle() == 2) LMAR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle())
+            EPC.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 2 + CycleHandler.getInstance().getInstructionStartCycle())
+            LMAR.getInstance().signal();
 
         //2. MDR <- M[MAR], read
-        if (CycleHandler.getInstance().getCurrentCycle() == 3) READ.getInstance().signal();
-        if (CycleHandler.getInstance().getCurrentCycle() == 4)
+        if (CycleHandler.getInstance().getCurrentCycle() == 3 + CycleHandler.getInstance().getInstructionStartCycle())
+            READ.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 4 + CycleHandler.getInstance().getInstructionStartCycle())
             LMDR.getInstance().setSource("data");                   //LMDR can be MDR <- IntBus or in this case MDR <- Data
-        if (CycleHandler.getInstance().getCurrentCycle() == 4) LMDR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 4 + CycleHandler.getInstance().getInstructionStartCycle())
+            LMDR.getInstance().signal();
 
         //3. PC++, IR <- MDR{31:28}
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) INC.getInstance().signal();
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) EMDR.getInstance().sendSubstring("opcode");
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) EMDR.getInstance().signal();
-        if (CycleHandler.getInstance().getCurrentCycle() == 6) LIR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 5 + CycleHandler.getInstance().getInstructionStartCycle())
+            INC.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 5 + CycleHandler.getInstance().getInstructionStartCycle())
+            EMDR.getInstance().sendSubstring("opcode");
+        if (CycleHandler.getInstance().getCurrentCycle() == 5 + CycleHandler.getInstance().getInstructionStartCycle())
+            EMDR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 6 + CycleHandler.getInstance().getInstructionStartCycle())
+            LIR.getInstance().signal();
 
         //4. decode
-        if (CycleHandler.getInstance().getCurrentCycle() == 7)
+        if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle())
             decodeInstruction(InstructionRegister.getInstance().getValue());
-//        if (CycleHandler.getInstance().getCurrentCycle() == 7)
+//        if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle()))
 //            System.out.println("END FETCH ==========================================");
 
         ComponentBuilder.redrawActiveElementsFetchPhase();

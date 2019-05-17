@@ -1,5 +1,6 @@
 package project.model.processor.behavior.signals;
 
+import project.logic.CycleHandler;
 import project.logic.HexHandler;
 import project.model.processor.ProgramCounter;
 

@@ -47,7 +47,7 @@ public class LowerLeftSide {
 
         Integer currCycle = CycleHandler.getInstance().getCurrentCycle();
 
-        if (currCycle < 8 && currCycle >= 0) {
+        if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle() && currCycle >= 0) {
             activeOperationsFetchPhase();
         }
 
@@ -68,39 +68,40 @@ public class LowerLeftSide {
         String activeOperationsString = "";
         List<String> activeOperations = new ArrayList<>();
 
-        if (CycleHandler.getInstance().getCurrentCycle() == 1) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("1. MAR <- PC");
             activeOperations.add("epc");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 2) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 2 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("1. MAR <- PC");
             activeOperations.add("epc");
             activeOperations.add("lmar");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 3) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 3 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("2. MDR <- M[MAR]");
             activeOperations.add("read");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 4) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 4 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("2. MDR <- M[MAR]");
             activeOperations.add("read");
             activeOperations.add("lmdr");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 5 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("3. PC++, IR <- MDR{31:28}");
             activeOperations.add("inc");
             activeOperations.add("emdr");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 6) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 6 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("3. PC++, IR <- MDR{31:28}");
             activeOperations.add("emdr");
             activeOperations.add("lir");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 7) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("4. *decoding*");
         }
 
-        if (CycleHandler.getInstance().getCurrentCycle() < 8 && CycleHandler.getInstance().getCurrentCycle() > 0) {
+        if (CycleHandler.getInstance().getCurrentCycle() < 8 + CycleHandler.getInstance().getInstructionStartCycle()
+                && CycleHandler.getInstance().getCurrentCycle() > 0) {
 
             for (String s : activeOperations) {
                 activeOperationsString = activeOperationsString + s + ", ";
@@ -108,7 +109,8 @@ public class LowerLeftSide {
             //remove the last ','
             activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
 
-            operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
+            operationsMap.put(CycleHandler.getInstance().getCurrentCycle()
+                    + CycleHandler.getInstance().getInstructionStartCycle(), activeOperationsString);
         }
     }
 }

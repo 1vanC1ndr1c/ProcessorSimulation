@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import project.logic.ComponentValuesContainer;
 import project.logic.CycleHandler;
 
 /**
@@ -33,6 +34,7 @@ public class Bottom {
         ScrollPane scrollPane = new ScrollPane(bottomGrid);
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
+        scrollPane.setHvalue(1.0);
 
         VBox bottomBox = new VBox();
 
@@ -89,12 +91,12 @@ public class Bottom {
     public static void fillAnEmptyGrid(GridPane gridPane) {
         //fill the grid with rectangles
         for (int i = 0; i < 9; i++) {
-            for (int j = 0; j <= 16; j++) {
+            for (int j = 0; j <= CycleHandler.getInstance().getCurrentCycle(); j++) {
                 if (j == 0) {
                     //first column and first row will be gray
                     gridPane.add(
                             new Rectangle(
-                                    gridPane.getWidth() / 17 - 1,
+                                    50,
                                     gridPane.getHeight() / 9 - 1,
                                     Color.GRAY),
                             j, i);
@@ -102,7 +104,7 @@ public class Bottom {
                     //the grid is interchanging white and light gray columns
                     gridPane.add(
                             new Rectangle(
-                                    gridPane.getWidth() / 17 - 1,
+                                    50,
                                     gridPane.getHeight() / 9 - 1,
                                     j % 2 == 0 ? Color.LIGHTGRAY : Color.WHITE),
                             j, i);
@@ -110,7 +112,7 @@ public class Bottom {
                 //first column and first row will be gray
                 gridPane.add(
                         new Rectangle(
-                                gridPane.getWidth() / 17 - 1,
+                                50,
                                 gridPane.getHeight() / 9 - 1,
                                 Color.GRAY),
                         j, 0);

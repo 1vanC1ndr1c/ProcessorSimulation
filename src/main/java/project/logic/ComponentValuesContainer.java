@@ -1,7 +1,6 @@
-package project.gui.bottom;
+package project.logic;
 
 import lombok.Data;
-import project.logic.CycleHandler;
 import project.model.processor.*;
 
 import java.util.*;
