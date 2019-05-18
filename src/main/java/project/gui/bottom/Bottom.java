@@ -19,7 +19,7 @@ import project.logic.CycleHandler;
 public class Bottom {
 
 
-    private static GridPane bottomGrid = new GridPane();
+    public static GridPane bottomGrid = new GridPane();
 
     public static void set(BorderPane borderPane) {
 
@@ -59,7 +59,7 @@ public class Bottom {
     }
 
 
-    private static void fillTheGrid(GridPane gridPane) {
+    public static void fillTheGrid(GridPane gridPane) {
         //draw the initial grid
         fillAnEmptyGrid(bottomGrid);
 
@@ -91,12 +91,12 @@ public class Bottom {
     public static void fillAnEmptyGrid(GridPane gridPane) {
         //fill the grid with rectangles
         for (int i = 0; i < 9; i++) {
-            for (int j = 0; j <= CycleHandler.getInstance().getCurrentCycle(); j++) {
+            for (int j = 0; j <= CycleHandler.getInstance().getCurrentCycle() + 1; j++) {
                 if (j == 0) {
                     //first column and first row will be gray
                     gridPane.add(
                             new Rectangle(
-                                    50,
+                                    100,
                                     gridPane.getHeight() / 9 - 1,
                                     Color.GRAY),
                             j, i);
@@ -104,7 +104,7 @@ public class Bottom {
                     //the grid is interchanging white and light gray columns
                     gridPane.add(
                             new Rectangle(
-                                    50,
+                                    100,
                                     gridPane.getHeight() / 9 - 1,
                                     j % 2 == 0 ? Color.LIGHTGRAY : Color.WHITE),
                             j, i);
@@ -112,7 +112,7 @@ public class Bottom {
                 //first column and first row will be gray
                 gridPane.add(
                         new Rectangle(
-                                50,
+                                100,
                                 gridPane.getHeight() / 9 - 1,
                                 Color.GRAY),
                         j, 0);

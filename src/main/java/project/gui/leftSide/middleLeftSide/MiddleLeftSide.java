@@ -15,6 +15,8 @@ import project.logic.CycleHandler;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
+import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.operationsMap;
+
 /**
  * Class that is used to draw the 'next' and 'prev' buttons into gui.
  */
@@ -111,12 +113,19 @@ public class MiddleLeftSide {
     }
 
     private static void buttonPrevOperation(BorderPane borderPane) {
+
         //remove current values
         if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();
-        }
-        if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().setNewComponentValues();
+
+            //rollback to previous instruction
+            /**??????????????????????????????**/
+            if (operationsMap.get(CycleHandler.getInstance().getCurrentCycle()).equals("*decoding failed*")) {
+                CycleHandler.getInstance().setInstructionStartCycle(CycleHandler.getInstance().getCurrentCycle() - 7);
+                Fetch.getInstance().decodedCorrectly = false;
+            }
+
         }
         //get the current cycle number and save the decremented value
         Integer currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
@@ -124,6 +133,7 @@ public class MiddleLeftSide {
         //do the proper instructions for a cycle
         if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             Fetch.getInstance().fetch();
+
         }
         if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) Execute.getInstance().execute();
         if (currCycle <= 0) {
