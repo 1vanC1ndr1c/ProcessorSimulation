@@ -87,7 +87,14 @@ public class MiddleLeftSide {
         if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             Fetch.getInstance().fetch();
         }
-        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) Execute.getInstance().execute();
+        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
+            //if it is decoded correctly, do the execute phase
+            if (Fetch.getInstance().decodedCorrectly == true) Execute.getInstance().execute();
+                //else, go to the next memory location
+            else {
+                CycleHandler.getInstance().setInstructionStartCycle(currCycle);
+            }
+        }
         //draw the results
         Bottom.set(borderPane);
         //update component values

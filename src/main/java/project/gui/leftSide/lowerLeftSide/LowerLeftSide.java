@@ -1,5 +1,6 @@
 package project.gui.leftSide.lowerLeftSide;
 
+import javafx.collections.ListChangeListener;
 import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
@@ -7,11 +8,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import lombok.Data;
 import project.logic.CycleHandler;
+import project.model.processor.behavior.Fetch;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 
 @Data
@@ -34,11 +38,6 @@ public class LowerLeftSide {
         setActiveOperations();
 //        lowerLeftSideBox.setStyle("-fx-font: 12 arial;");
 
-        //add a scroll pane to the cycles
-        ScrollPane scrollPane = new ScrollPane(lowerLeftSideBox);
-        scrollPane.setFitToHeight(true);
-
-
         return lowerLeftSideBox;
     }
 
@@ -56,7 +55,6 @@ public class LowerLeftSide {
                 lowerLeftSideBox.getChildren().add(new Text(("#" + i.toString() + ": " + operationsMap.get(i))));
             }
         }
-
 
     }
 
@@ -102,15 +100,22 @@ public class LowerLeftSide {
 
         if (CycleHandler.getInstance().getCurrentCycle() < 8 + CycleHandler.getInstance().getInstructionStartCycle()
                 && CycleHandler.getInstance().getCurrentCycle() > 0) {
+            if (Fetch.getInstance().decodedCorrectly == true) {
+                for (String s : activeOperations) {
+                    activeOperationsString = activeOperationsString + s + ", ";
+                }
+                //remove the last ','
+                activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
 
-            for (String s : activeOperations) {
-                activeOperationsString = activeOperationsString + s + ", ";
+                operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
             }
-            //remove the last ','
-            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
-
-            operationsMap.put(CycleHandler.getInstance().getCurrentCycle()
-                    + CycleHandler.getInstance().getInstructionStartCycle(), activeOperationsString);
+            if (Fetch.getInstance().decodedCorrectly == false) {
+                operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), "4. *decoding*");
+            }
+            if (Fetch.getInstance().decodedCorrectly == false
+                    && CycleHandler.getInstance().getCurrentCycle() == CycleHandler.getInstance().getInstructionStartCycle()) {
+                operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), "*decoding failed*");
+            }
         }
     }
 }

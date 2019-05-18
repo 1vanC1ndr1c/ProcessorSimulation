@@ -32,7 +32,9 @@ public class LeftSide {
         ScrollPane scrollPane = new ScrollPane(lowerLeftSideBox);
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
+        scrollPane.setHvalue(1.0);
 
+        lowerLeftSideBox.getChildren().add(scrollPane);
         leftBox.getChildren().addAll(upperLeftSideBox, middleLeftSideBox, lowerLeftSideBox, scrollPane);
 
         borderPane.setLeft(leftBox);

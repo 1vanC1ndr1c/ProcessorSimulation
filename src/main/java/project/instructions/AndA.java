@@ -50,9 +50,9 @@ public final class AndA implements BaseInstruction {
             EALU.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 15 + CycleHandler.getInstance().getInstructionStartCycle())
             LA.getInstance().signal();
-        //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 17 + CycleHandler.getInstance().getInstructionStartCycle())
-            CycleHandler.getInstance().setCurrentCycle(16 + CycleHandler.getInstance().getInstructionStartCycle());
+//        //end of instruction
+//        if (CycleHandler.getInstance().getCurrentCycle() == 17 + CycleHandler.getInstance().getInstructionStartCycle())
+//            CycleHandler.getInstance().setCurrentCycle(16 + CycleHandler.getInstance().getInstructionStartCycle());
 
         drawActiveElements();
         activeOperationsExecutePhase();
@@ -155,8 +155,7 @@ public final class AndA implements BaseInstruction {
             //remove the last ','
             activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
 
-            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle()
-                    + CycleHandler.getInstance().getInstructionStartCycle(), activeOperationsString);
+            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }
     }
 }

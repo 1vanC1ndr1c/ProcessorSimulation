@@ -158,8 +158,7 @@ public final class AddA implements BaseInstruction {
             //remove the last ','
             activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
 
-            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle()
-                    + CycleHandler.getInstance().getInstructionStartCycle(), activeOperationsString);
+            LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }
     }
 }

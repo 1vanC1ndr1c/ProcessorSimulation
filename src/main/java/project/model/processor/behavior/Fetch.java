@@ -13,14 +13,15 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
 
     private T decodedInstruction;
 
+    public static boolean decodedCorrectly = true;
+
     private static final Fetch FETCH = new Fetch();
 
-    public static Fetch getInstance() {
-        return FETCH;
-    }
+    public static Fetch getInstance() { return FETCH; }
 
 
     public void fetch() {
+        decodedCorrectly = true;
 
 //        if (CycleHandler.getInstance().getCurrentCycle() == 0 + CycleHandler.getInstance().getInstructionStartCycle())
 //              OutputHandler.processorOut("Before first fetch", 0);
@@ -70,29 +71,38 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
         switch (opCode) {
             case "1": //adda.opcode = HEX(1)
                 decodedInstruction = (T) AddA.getInstance();
+                decodedCorrectly = true;
                 break;
             case "2": //lda.opcode = HEX(2)
                 decodedInstruction = (T) LdA.getInstance();
+                decodedCorrectly = true;
                 break;
             case "3": //anda.opcode = HEX(3)
                 decodedInstruction = (T) AndA.getInstance();
+                decodedCorrectly = true;
                 break;
             case "4": //anda.opcode = HEX(4)
                 decodedInstruction = (T) StA.getInstance();
+                decodedCorrectly = true;
                 break;
             case "5": //shra.opcode = HEX(5)
                 decodedInstruction = (T) ShrA.getInstance();
+                decodedCorrectly = true;
                 break;
             case "6": //jmpz.opcode = HEX(6)
                 decodedInstruction = (T) JmpZ.getInstance();
+                decodedCorrectly = true;
                 break;
             case "7": //jmp.opcode = HEX(7)
                 decodedInstruction = (T) Jmp.getInstance();
+                decodedCorrectly = true;
                 break;
             case "8": //coma.opcode = HEX(8)
                 decodedInstruction = (T) ComA.getInstance();
+                decodedCorrectly = true;
                 break;
             default:
+                decodedCorrectly = false;
                 System.out.println("            ***Cannot Decode!***");
                 System.out.println("            ========================================");
                 break;
