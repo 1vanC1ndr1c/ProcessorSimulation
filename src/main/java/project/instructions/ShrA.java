@@ -24,9 +24,8 @@ public class ShrA implements BaseInstruction {
     @Override
     public void execute() {
         //1. A <- shr(A)
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) SHR.getInstance().signal();
-        //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 10) CycleHandler.getInstance().setCurrentCycle(9);
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle())
+            SHR.getInstance().signal();
 
         drawActiveElements();
         activeOperationsExecutePhase();
@@ -34,13 +33,9 @@ public class ShrA implements BaseInstruction {
 
     private void drawActiveElements() {
         //1. A <- shr(A)
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //SHR
             Middle.fillTheGrid(Middle.middleGroup, "acc", "noIntBus");
-        }
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
-            //instruction complete, no active elements
-            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 
@@ -50,16 +45,16 @@ public class ShrA implements BaseInstruction {
         String activeOperationsString = "";
         List<String> activeOperations = new ArrayList<>();
 
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("1. A <- shr(A)}");
             activeOperations.add("shr");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() < 9) {
+        if (CycleHandler.getInstance().getCurrentCycle() < 9 + CycleHandler.getInstance().getInstructionStartCycle()) {
             for (String s : activeOperations) {
                 activeOperationsString = activeOperationsString + s + ", ";
             }
-            //remove the last ','
-            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+            //remove the last ', '
+            activeOperationsString = activeOperationsString.replaceAll(", $", "");
 
             LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }

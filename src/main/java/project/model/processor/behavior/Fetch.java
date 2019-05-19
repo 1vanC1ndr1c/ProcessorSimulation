@@ -1,6 +1,5 @@
 package project.model.processor.behavior;
 
-
 import lombok.Data;
 import project.logic.CycleHandler;
 import project.gui.middle.ComponentBuilder;
@@ -12,21 +11,16 @@ import project.model.processor.behavior.signals.*;
 public final class Fetch<T extends BaseInstruction> extends Thread {
 
     private T decodedInstruction;
-
     public static boolean decodedCorrectly = true;
 
     private static final Fetch FETCH = new Fetch();
 
-    public static Fetch getInstance() { return FETCH; }
-
+    public static Fetch getInstance() {
+        return FETCH;
+    }
 
     public void fetch() {
         decodedCorrectly = true;
-
-//        if (CycleHandler.getInstance().getCurrentCycle() == 0 + CycleHandler.getInstance().getInstructionStartCycle())
-//              OutputHandler.processorOut("Before first fetch", 0);
-//        if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle())
-//            System.out.println("FETCH PHASE:========================================");
 
         //1. MAR <- PC
         if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle())
@@ -55,8 +49,6 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
         //4. decode
         if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle())
             decodeInstruction(InstructionRegister.getInstance().getValue());
-//        if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle()))
-//            System.out.println("END FETCH ==========================================");
 
         ComponentBuilder.redrawActiveElementsFetchPhase();
     }
@@ -66,8 +58,6 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
         //if the data in the memory is M1M2M3M4M5M6M7
         //then the opcode is the M1, M2 is irrelevant, and the rest
         //is data of the instruction
-//        System.out.println("            ***Instruction decoding***");
-//        System.out.println("            ========================================");
         switch (opCode) {
             case "1": //adda.opcode = HEX(1)
                 decodedInstruction = (T) AddA.getInstance();
@@ -103,8 +93,6 @@ public final class Fetch<T extends BaseInstruction> extends Thread {
                 break;
             default:
                 decodedCorrectly = false;
-                System.out.println("            ***Cannot Decode!***");
-                System.out.println("            ========================================");
                 break;
         }
     }

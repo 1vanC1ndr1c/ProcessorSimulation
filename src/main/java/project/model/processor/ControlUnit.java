@@ -1,10 +1,8 @@
 package project.model.processor;
 
-
 import lombok.Data;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
-
 
 @Data
 public class ControlUnit extends BaseComponent {

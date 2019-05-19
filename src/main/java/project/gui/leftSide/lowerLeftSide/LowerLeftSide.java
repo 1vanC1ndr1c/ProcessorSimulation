@@ -1,8 +1,6 @@
 package project.gui.leftSide.lowerLeftSide;
 
-import javafx.collections.ListChangeListener;
 import javafx.geometry.Insets;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -14,8 +12,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 
 @Data
@@ -42,6 +38,7 @@ public class LowerLeftSide {
     }
 
     public static void setActiveOperations() {
+
         lowerLeftSideBox.getChildren().clear();
 
         Integer currCycle = CycleHandler.getInstance().getCurrentCycle();
@@ -98,21 +95,21 @@ public class LowerLeftSide {
             activeOperations.add("4. *decoding*");
         }
 
-        if (CycleHandler.getInstance().getCurrentCycle() < 8 + CycleHandler.getInstance().getInstructionStartCycle()
-                && CycleHandler.getInstance().getCurrentCycle() > 0) {
-            if (Fetch.getInstance().decodedCorrectly == true) {
+        if (CycleHandler.getInstance().getCurrentCycle() > 0) {
+            if (Fetch.decodedCorrectly) {
                 for (String s : activeOperations) {
                     activeOperationsString = activeOperationsString + s + ", ";
                 }
-                //remove the last ','
-                activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+                //remove the last ', '
+                activeOperationsString = activeOperationsString.replaceAll(", $", "");
 
-                operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
+                if (activeOperationsString.length() > 0)
+                    operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
             }
-            if (Fetch.getInstance().decodedCorrectly == false) {
+            if (!Fetch.decodedCorrectly) {
                 operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), "4. *decoding*");
             }
-            if (Fetch.getInstance().decodedCorrectly == false
+            if (!Fetch.decodedCorrectly
                     && CycleHandler.getInstance().getCurrentCycle() == CycleHandler.getInstance().getInstructionStartCycle()) {
                 operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), "*decoding failed*");
             }

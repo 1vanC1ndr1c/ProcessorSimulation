@@ -13,8 +13,6 @@ public final class Execute {
     }
 
     public static void execute() {
-//        if (CycleHandler.getInstance().getCurrentCycle() == 8)
-//            System.out.println("EXECUTE PHASE:======================================");
         if (CycleHandler.getInstance().getCurrentCycle() >= 8) Fetch.getInstance().getDecodedInstruction().execute();
     }
 }

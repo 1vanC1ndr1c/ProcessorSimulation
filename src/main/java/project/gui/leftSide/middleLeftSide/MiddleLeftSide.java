@@ -15,6 +15,9 @@ import project.logic.CycleHandler;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
+
+import java.util.Map;
+
 import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.operationsMap;
 
 /**
@@ -83,30 +86,36 @@ public class MiddleLeftSide {
         //save current values
         ComponentValuesContainer.getInstance().saveCurrentComponentValues();
         //get the current cycle number and save the incremented value
-        Integer currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
+        int currCycle = CycleHandler.getInstance().getCurrentCycle() + 1;
         CycleHandler.getInstance().setCurrentCycle(currCycle);
-        //do the proper instructions for a cycle
+
+        //do the proper instructions for a cycle (fetch or execute phase)
+
+        //fetch phase
         if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             Fetch.getInstance().fetch();
         }
+
+        //execute phase
         if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //if it is decoded correctly, do the execute phase
-            if (Fetch.getInstance().decodedCorrectly == true) Execute.getInstance().execute();
-                //else, go to the next memory location
-            else {
+            if (Fetch.decodedCorrectly) {
+                Execute.execute();
+            } else //else, go to the next memory location
                 CycleHandler.getInstance().setInstructionStartCycle(currCycle);
-            }
         }
-        //draw the results
-        Bottom.set(borderPane);
-        //update component values
-        UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
+
+        Bottom.set(borderPane);//draw the results
+        UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
 
-        //if the instruction is done, proceed to the next one
-        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
-            if (currCycle == CycleHandler.getInstance().getInstructionStartCycle() + Fetch.getInstance().getDecodedInstruction().getNoOfCycles()) {
-                //next instruction starts at the next cycle
+        CycleHandler.startOfTheInstructions.put(currCycle, CycleHandler.getInstance().getInstructionStartCycle());
+
+        //if it is the end of the current operation(that was successfully executed), set the starting cycle
+        //of the next instruction to the next cycle
+        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle() && Fetch.decodedCorrectly) {
+            if (currCycle == CycleHandler.getInstance().getInstructionStartCycle()
+                    + Fetch.getInstance().getDecodedInstruction().getNoOfCycles()) {
                 CycleHandler.getInstance().setInstructionStartCycle(currCycle);
             }
         }
@@ -114,37 +123,40 @@ public class MiddleLeftSide {
 
     private static void buttonPrevOperation(BorderPane borderPane) {
 
+        for (Map.Entry<Integer, String> entry : LowerLeftSide.operationsMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
         //remove current values
         if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();
             ComponentValuesContainer.getInstance().setNewComponentValues();
 
-            //rollback to previous instruction
-            /**??????????????????????????????**/
-            if (operationsMap.get(CycleHandler.getInstance().getCurrentCycle()).equals("*decoding failed*")) {
-                CycleHandler.getInstance().setInstructionStartCycle(CycleHandler.getInstance().getCurrentCycle() - 7);
-                Fetch.getInstance().decodedCorrectly = false;
-            }
-
+            //check if current is part of previous instruction rather than current one
+            CycleHandler.getInstance().setInstructionStartCycle(
+                    CycleHandler.startOfTheInstructions.get(CycleHandler.getInstance().getCurrentCycle()));
         }
+
+
         //get the current cycle number and save the decremented value
-        Integer currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
+        int currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;
         CycleHandler.getInstance().setCurrentCycle(currCycle);
+
         //do the proper instructions for a cycle
-        if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
+        if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle())
             Fetch.getInstance().fetch();
 
-        }
-        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) Execute.getInstance().execute();
+        if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) Execute.execute();
+
+        //make sure cycles don't rollback past zero
         if (currCycle <= 0) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();
             CycleHandler.getInstance().setCurrentCycle(0);
             Middle.fillTheGrid(Middle.middleGroup);
         }
-        //draw the results
-        Bottom.set(borderPane);
-        //update component values
-        UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);
+
+        Bottom.set(borderPane);    //draw the results
+        UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
     }
 }

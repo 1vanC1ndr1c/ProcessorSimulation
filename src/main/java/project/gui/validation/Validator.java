@@ -87,7 +87,7 @@ public class Validator {
         UpperRightSide.loadComponents(gridPane);
     }
 
-    public static boolean validateInstructionLocation(GridPane gridPane) {
+    public static void validateInstructionLocation(GridPane gridPane) {
         //check text fields for memory location values
         //location needs to be a six digit string
         //if it isn't, reset it to "000000"
@@ -97,14 +97,13 @@ public class Validator {
                 TextField textField = (TextField) node;
                 if (textField.getLength() != 6) {
                     gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
-                    return false;
+                    return;
                 }
                 if (!Memory.getInstance().getLocationAndContent().containsKey(textField.getText())) {
                     gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
-                    return false;
+                    return;
                 }
             }
         }
-        return true;
     }
 }

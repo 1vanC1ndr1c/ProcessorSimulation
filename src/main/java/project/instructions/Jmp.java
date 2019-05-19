@@ -24,28 +24,25 @@ public final class Jmp implements BaseInstruction {
     @Override
     public void execute() {
         //1. PC <- MDR [23:0}
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().sendSubstring("data");
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) EMDR.getInstance().signal();
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) LPC.getInstance().signal();
-        //end of instruction
-        if (CycleHandler.getInstance().getCurrentCycle() == 11) CycleHandler.getInstance().setCurrentCycle(10);
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle())
+            EMDR.getInstance().sendSubstring("data");
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle())
+            EMDR.getInstance().signal();
+        if (CycleHandler.getInstance().getCurrentCycle() == 9 + CycleHandler.getInstance().getInstructionStartCycle())
+            LPC.getInstance().signal();
 
         drawActiveElements();
         activeOperationsExecutePhase();
     }
 
     private void drawActiveElements() {
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //EMDR
             Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 9 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //LPC
             Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus", "mdr");
-        }
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
-            //instruction complete, no active elements
-            Middle.fillTheGrid(Middle.middleGroup);
         }
     }
 
@@ -55,21 +52,21 @@ public final class Jmp implements BaseInstruction {
         String activeOperationsString = "";
         List<String> activeOperations = new ArrayList<>();
 
-        if (CycleHandler.getInstance().getCurrentCycle() == 8) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("1. PC <- MDR [23:0]");
             activeOperations.add("emdr");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 9) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 9 + CycleHandler.getInstance().getInstructionStartCycle()) {
             activeOperations.add("1. PC <- MDR [23:0]");
             activeOperations.add("emdr");
             activeOperations.add("lpc");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() < 10) {
+        if (CycleHandler.getInstance().getCurrentCycle() < 10 + CycleHandler.getInstance().getInstructionStartCycle()) {
             for (String s : activeOperations) {
                 activeOperationsString = activeOperationsString + s + ", ";
             }
-            //remove the last ','
-            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+            //remove the last ', '
+            activeOperationsString = activeOperationsString.replaceAll(", $", "");
 
             LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }

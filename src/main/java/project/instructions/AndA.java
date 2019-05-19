@@ -50,9 +50,6 @@ public final class AndA implements BaseInstruction {
             EALU.getInstance().signal();
         if (CycleHandler.getInstance().getCurrentCycle() == 15 + CycleHandler.getInstance().getInstructionStartCycle())
             LA.getInstance().signal();
-//        //end of instruction
-//        if (CycleHandler.getInstance().getCurrentCycle() == 17 + CycleHandler.getInstance().getInstructionStartCycle())
-//            CycleHandler.getInstance().setCurrentCycle(16 + CycleHandler.getInstance().getInstructionStartCycle());
 
         drawActiveElements();
         activeOperationsExecutePhase();
@@ -80,7 +77,6 @@ public final class AndA implements BaseInstruction {
             //LMDR
             Middle.fillTheGrid(Middle.middleGroup, "memory", "mdr");
         }
-
         //3. A <- A & MDR
         if (CycleHandler.getInstance().getCurrentCycle() == 12 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //EMDR, AND
@@ -152,8 +148,8 @@ public final class AndA implements BaseInstruction {
             for (String s : activeOperations) {
                 activeOperationsString = activeOperationsString + s + ", ";
             }
-            //remove the last ','
-            activeOperationsString = activeOperationsString.substring(0, activeOperationsString.length() - 2);
+            //remove the last ', '
+            activeOperationsString = activeOperationsString.replaceAll(", $", "");
 
             LowerLeftSide.operationsMap.put(CycleHandler.getInstance().getCurrentCycle(), activeOperationsString);
         }
