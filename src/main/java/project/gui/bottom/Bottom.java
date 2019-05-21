@@ -48,7 +48,6 @@ public class Bottom {
         borderPane.setBottom(bottomBox);
     }
 
-
     //method that deals with grid resizing
     private static void resize(GridPane gridPane, BorderPane borderPane) {
         gridPane.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.70));
@@ -57,7 +56,6 @@ public class Bottom {
         //every resizing requires drawing the elements again
         fillTheGrid(bottomGrid);
     }
-
 
     public static void fillTheGrid(GridPane gridPane) {
         //draw the initial grid
@@ -86,7 +84,6 @@ public class Bottom {
             gridPane.add(new Text(ComponentValuesContainer.getInstance().getTrValues().get(i - 1)), i, 8);
         }
     }
-
 
     public static void fillAnEmptyGrid(GridPane gridPane) {
         gridPane.getChildren().clear();

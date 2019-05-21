@@ -4,8 +4,6 @@ import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.logic.CycleHandler;
 import project.gui.middle.Middle;
-import project.model.memory.Memory;
-import project.model.processor.ProgramCounter;
 import project.model.processor.behavior.signals.*;
 
 import java.util.ArrayList;

@@ -16,7 +16,6 @@ import static project.logic.CycleHandler.startOfTheInstructions;
 
 public class Processor extends Application {
     public static void main(String[] args) {
-
         MemoryLoader.loadData();
         launch(args);
     }
@@ -43,5 +42,4 @@ public class Processor extends Application {
 
         primaryStage.show();
     }
-
 }

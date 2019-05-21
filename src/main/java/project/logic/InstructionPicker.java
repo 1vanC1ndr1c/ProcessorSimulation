@@ -3,6 +3,11 @@ package project.logic;
 import project.model.processor.Accumulator;
 import project.model.processor.ProgramCounter;
 
+/**
+ * Class used in older versions of the application
+ * where the validity of the program was tested through the
+ * console and directly written into predetermined memory locations
+ */
 public class InstructionPicker {
 
     public static void pick(String instruction) {

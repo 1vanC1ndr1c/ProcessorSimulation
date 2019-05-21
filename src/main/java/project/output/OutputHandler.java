@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class OutputHandler {
 
+    //commented out so there is no printouts in the console
     public static void processorOut(String phase, Integer indentationLevel) {
 //        String padding = "";
 //        if (indentationLevel > 0) {
