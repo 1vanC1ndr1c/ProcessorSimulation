@@ -123,10 +123,6 @@ public class MiddleLeftSide {
 
     private static void buttonPrevOperation(BorderPane borderPane) {
 
-        for (Map.Entry<Integer, String> entry : LowerLeftSide.operationsMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
-
         //remove current values
         if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();
@@ -136,7 +132,6 @@ public class MiddleLeftSide {
             CycleHandler.getInstance().setInstructionStartCycle(
                     CycleHandler.startOfTheInstructions.get(CycleHandler.getInstance().getCurrentCycle()));
         }
-
 
         //get the current cycle number and save the decremented value
         int currCycle = CycleHandler.getInstance().getCurrentCycle() - 1;

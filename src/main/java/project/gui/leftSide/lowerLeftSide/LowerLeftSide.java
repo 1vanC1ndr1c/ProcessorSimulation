@@ -32,7 +32,6 @@ public class LowerLeftSide {
         lowerLeftSideBox.setStyle("-fx-border-color: black");
         lowerLeftSideBox.setPadding(new Insets(10.0, 10.0, 10.0, 10.0));
         setActiveOperations();
-//        lowerLeftSideBox.setStyle("-fx-font: 12 arial;");
 
         return lowerLeftSideBox;
     }

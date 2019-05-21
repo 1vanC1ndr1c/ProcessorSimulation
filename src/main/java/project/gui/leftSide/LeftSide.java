@@ -7,7 +7,6 @@ import javafx.scene.layout.VBox;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.leftSide.upperLeftSide.UpperLeftSide;
-import project.gui.validation.Validator;
 
 /**
  * This class is used to draw the left side of the gui.
@@ -32,9 +31,8 @@ public class LeftSide {
         ScrollPane scrollPane = new ScrollPane(lowerLeftSideBox);
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
-        scrollPane.setHvalue(1.0);
-
-        lowerLeftSideBox.getChildren().add(scrollPane);
+        scrollPane.setVvalue(1.0);
+        
         leftBox.getChildren().addAll(upperLeftSideBox, middleLeftSideBox, lowerLeftSideBox, scrollPane);
 
         borderPane.setLeft(leftBox);
