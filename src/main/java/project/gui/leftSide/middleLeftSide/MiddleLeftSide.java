@@ -18,11 +18,6 @@ import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
 
 
-import java.util.Map;
-
-import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.lowerLeftSideBox;
-import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.operationsMap;
-
 /**
  * Class that is used to draw the 'next' and 'prev' buttons into gui.
  */
@@ -50,12 +45,14 @@ public class MiddleLeftSide {
         buttonNext.setOnAction(e -> {
             buttonNextOperation(borderPane);
         });
+
         //==============================================================================================================
         //prev button ==================================================================================================
         prevButton = new Button("Prev.");
         prevButton.setOnAction(e -> {
             buttonPrevOperation(borderPane);
         });
+
         //==============================================================================================================
         //fetch and execute button =====================================================================================
         fetchAndExecuteButton = new Button("Fetch and Execute");
@@ -84,8 +81,8 @@ public class MiddleLeftSide {
         return middleLeftSideBox;
     }
 
-    private static void buttonNextOperation(BorderPane borderPane) {
 
+    private static void buttonNextOperation(BorderPane borderPane) {
         //save current values
         ComponentValuesContainer.getInstance().saveCurrentComponentValues();
         //get the current cycle number and save the incremented value
@@ -124,8 +121,8 @@ public class MiddleLeftSide {
         }
     }
 
-    private static void buttonPrevOperation(BorderPane borderPane) {
 
+    private static void buttonPrevOperation(BorderPane borderPane) {
         //remove current values
         if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();
@@ -156,7 +153,6 @@ public class MiddleLeftSide {
         Bottom.set(borderPane);    //draw the results
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
-
 
         //move the scrollbar to the correct position
         middleLeftSideBox.layout();

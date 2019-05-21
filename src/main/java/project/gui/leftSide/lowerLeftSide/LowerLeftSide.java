@@ -36,6 +36,7 @@ public class LowerLeftSide {
         return lowerLeftSideBox;
     }
 
+
     public static void setActiveOperations() {
 
         lowerLeftSideBox.getChildren().clear();
