@@ -1,5 +1,6 @@
 package project.gui.leftSide.middleLeftSide;
 
+import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -7,6 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import project.gui.bottom.Bottom;
+import project.gui.leftSide.LeftSide;
 import project.logic.ComponentValuesContainer;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.middle.Middle;
@@ -18,6 +20,7 @@ import project.model.processor.behavior.Fetch;
 
 import java.util.Map;
 
+import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.lowerLeftSideBox;
 import static project.gui.leftSide.lowerLeftSide.LowerLeftSide.operationsMap;
 
 /**
@@ -30,11 +33,11 @@ public class MiddleLeftSide {
     public static Button buttonNext = new Button("Next");
     public static Button prevButton = new Button("Prev.");
     public static Button fetchAndExecuteButton = new Button("Fetch and Execute");
+    public static VBox middleLeftSideBox = new VBox();
 
 
     public static VBox set(BorderPane borderPane) {
 
-        VBox middleLeftSideBox = new VBox();
         middleLeftSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.15));
         middleLeftSideBox.setStyle("-fx-border-color: black");
         middleLeftSideBox.setPadding(new Insets(0.0, 10.0, 10.0, 10.0));
@@ -153,5 +156,12 @@ public class MiddleLeftSide {
         Bottom.set(borderPane);    //draw the results
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
+
+
+        //move the scrollbar to the correct position
+        middleLeftSideBox.layout();
+        middleLeftSideBox.heightProperty().addListener(
+                (ChangeListener) (observable, oldvalue, newValue) -> LeftSide.scrollPane.setVvalue(1d));
+
     }
 }

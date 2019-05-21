@@ -89,6 +89,7 @@ public class Bottom {
 
 
     public static void fillAnEmptyGrid(GridPane gridPane) {
+        gridPane.getChildren().clear();
         //fill the grid with rectangles
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j <= CycleHandler.getInstance().getCurrentCycle() + 1; j++) {

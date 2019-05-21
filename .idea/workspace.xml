@@ -6,14 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" line="152" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" line="155" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3152b84-1f6b-453a-8762-40d1d581199f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/bottom/Bottom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/bottom/Bottom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/gui/leftSide/LeftSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/gui/leftSide/LeftSide.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +29,7 @@
     <session id="1248389291">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.22" value="1" />
@@ -39,7 +42,8 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,14 +61,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="java" value="14046" />
+          <entry key="java" value="14272" />
           <entry key="txt" value="37" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14046" />
+          <entry key="JAVA" value="14272" />
           <entry key="PLAIN_TEXT" value="52" />
           <entry key="XML" value="21" />
         </counts>
@@ -73,11 +77,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="655">
+              <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-822">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="213">
+              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -97,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="272">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
+            <state relative-caret-position="553">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/LowerRightSide/LowerRightSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/rightSide/UpperRightSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/output/OutputHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/AddA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/ComA.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/instructions/AndA.java" />
@@ -177,9 +180,10 @@
         <option value="$PROJECT_DIR$/src/main/java/project/model/processor/behavior/Fetch.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/logic/CycleHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/Processor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java" />
       </list>
     </option>
   </component>
@@ -227,7 +231,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,6 +393,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,18 +481,19 @@
       <workItem from="1558183288396" duration="4106000" />
       <workItem from="1558213700006" duration="5052000" />
       <workItem from="1558291173902" duration="12198000" />
-      <workItem from="1558452152151" duration="554000" />
+      <workItem from="1558452152151" duration="634000" />
+      <workItem from="1558467188827" duration="912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79019000" />
+    <option name="totallyTimeSpent" value="80011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29767725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30134475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -497,7 +502,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49816626" weight="0.32847533" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.67114913" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66992664" visible="true" weight="0.040358745" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49816626" weight="0.012331839" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -505,8 +510,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32885087" side_tool="true" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4767726" weight="0.1838565" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.33007336" side_tool="true" visible="true" weight="0.040358745" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.47616136" weight="0.1838565" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -871,24 +876,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/bottom/Bottom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-822">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="213">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/lowerLeftSide/LowerLeftSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
+        <state relative-caret-position="272">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -898,8 +893,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/LeftSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
+        <state relative-caret-position="553">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/gui/leftSide/middleLeftSide/MiddleLeftSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
