@@ -47,4 +47,19 @@ public class HexHandler {
             resultAsString = "0" + resultAsString;
         return resultAsString;
     }
+
+    public static boolean checkIfHex(String string) {
+        for (int j = 0; j < string.length(); j++) {
+            if (!Character.isDigit(string.charAt(j))) {
+                if (Character.toLowerCase(string.charAt(j)) != 'a'
+                        && Character.toLowerCase(string.charAt(j)) != 'b'
+                        && Character.toLowerCase(string.charAt(j)) != 'c'
+                        && Character.toLowerCase(string.charAt(j)) != 'd'
+                        && Character.toLowerCase(string.charAt(j)) != 'e'
+                        && Character.toLowerCase(string.charAt(j)) != 'f')
+                    return false;
+            }
+        }
+        return true;
+    }
 }

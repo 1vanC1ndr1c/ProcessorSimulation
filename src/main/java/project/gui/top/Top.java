@@ -16,9 +16,7 @@ public class Top {
         topBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.01));
 
         Button button = new Button("Instruction Editor");
-        button.setOnAction(e -> {
-            InstructionEditor.setEditorWindow();
-        });
+        button.setOnAction(e -> new InstructionEditor().setEditorWindow());
 
         topBox.getChildren().addAll(button, new Text(" "), InstructionOpCodes.setInstructionList());
 

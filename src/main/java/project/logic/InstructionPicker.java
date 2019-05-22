@@ -43,6 +43,7 @@ public class InstructionPicker {
                 break;
             default:
                 ProgramCounter.getInstance().setValue("000021");//adda
+                break;
         }
     }
 

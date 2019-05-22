@@ -14,7 +14,7 @@ public class RightSide {
     public static void set(BorderPane borderPane) {
         VBox rightSideBox = new VBox();                                 //box for the whole right side
         VBox components = UpperRightSide.set(borderPane);               //box for the upper side
-        VBox memory = LowerRightSide.set(borderPane);                   //box for the lower side
+        VBox memory = LowerRightSide.set();                   //box for the lower side
 
         //set scaling
         rightSideBox.prefWidthProperty().bind(borderPane.widthProperty().multiply(0.12));
