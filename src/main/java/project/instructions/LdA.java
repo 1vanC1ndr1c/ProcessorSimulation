@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class LdA implements BaseInstruction {
 
-    Integer noOfCycles = 12;
+    Integer noOfCycles = 13;
 
     private static final LdA LD_A = new LdA();
 

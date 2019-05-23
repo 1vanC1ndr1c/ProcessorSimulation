@@ -7,8 +7,6 @@ import project.model.processor.MemoryDataRegister;
 @Data
 public final class EMDR extends BaseSignal {
 
-    Integer noOfCycles = 2;
-
     private String sendPart = "opCode";
 
     private static final EMDR EMDR = new EMDR();

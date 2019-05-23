@@ -5,8 +5,6 @@ import project.model.processor.TemporaryRegister;
 
 public final class LALU extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final LALU LALU = new LALU();
 
     public static LALU getInstance() {

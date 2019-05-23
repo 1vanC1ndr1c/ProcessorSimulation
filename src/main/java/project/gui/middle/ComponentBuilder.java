@@ -47,7 +47,7 @@ public class ComponentBuilder {
         //==============================================================================================================
         //draw the component ===========================================================================================
         if (componentChoice.equals("else") || componentChoice.equals("memory")) {
-            Rectangle component = new Rectangle(cellDimension*1.3, cellDimension);
+            Rectangle component = new Rectangle(cellDimension * 1.3, cellDimension);
             component.setFill(componentColor);
             component.setStroke(Color.BLACK);
             Text componentText = new Text(componentName);
@@ -116,34 +116,34 @@ public class ComponentBuilder {
     //phases are being executed in the individual classes of the instructions
     public static void redrawActiveElementsFetchPhase() {
         //1. MAR <- PC
-        if (CycleHandler.getInstance().getCurrentCycle() == 1) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 1 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //epc
             Middle.fillTheGrid(Middle.middleGroup, "pc", "intbus");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 2) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 2 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //lmar
             Middle.fillTheGrid(Middle.middleGroup, "pc", "mar", "intbus");
         }
         //2. MDR <- M[MAR], read
-        if (CycleHandler.getInstance().getCurrentCycle() == 3) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 3 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //read
             Middle.fillTheGrid(Middle.middleGroup, "memory");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 4) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 4 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //lmdr
             Middle.fillTheGrid(Middle.middleGroup, "mdr", "memory");
         }
         //3. PC++, IR <- MDR{31:28}
-        if (CycleHandler.getInstance().getCurrentCycle() == 5) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 5 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //inc, emdr
             Middle.fillTheGrid(Middle.middleGroup, "pc", "mdr", "intbus", "inc");
         }
-        if (CycleHandler.getInstance().getCurrentCycle() == 6) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 6 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //lir
             Middle.fillTheGrid(Middle.middleGroup, "mdr", "intbus", "ir");
         }
         //4. decode
-        if (CycleHandler.getInstance().getCurrentCycle() == 7) {
+        if (CycleHandler.getInstance().getCurrentCycle() == 7 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //nothing is active during the decoding
             Middle.fillTheGrid(Middle.middleGroup);
         }

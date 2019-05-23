@@ -5,8 +5,6 @@ import project.model.processor.ProgramCounter;
 
 public final class LPC extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final LPC LPC = new LPC();
 
     public static LPC getInstance() {

@@ -8,8 +8,6 @@ import project.model.processor.MemoryDataRegister;
 @Data
 public class WRITE extends BaseSignal {
 
-    Integer noOfCycles = 2;
-
     public String MemoryContentFromMAR;
 
     private static final WRITE WRITE = new WRITE();

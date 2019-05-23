@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 public class JmpZ implements BaseInstruction {
 
-    Integer noOfCycles = 8;
+    Integer noOfCycles = 9;
 
     private static final JmpZ JMP_Z = new JmpZ();
 
@@ -31,11 +31,9 @@ public class JmpZ implements BaseInstruction {
                 EMDR.getInstance().sendSubstring("data");
             if (CycleHandler.getInstance().getCurrentCycle() == 8 + CycleHandler.getInstance().getInstructionStartCycle())
                 EMDR.getInstance().signal();
-            if (CycleHandler.getInstance().getCurrentCycle() == 9 + CycleHandler.getInstance().getInstructionStartCycle())
+            if (CycleHandler.getInstance().getCurrentCycle() == 9 + CycleHandler.getInstance().getInstructionStartCycle()) {
                 LPC.getInstance().signal();
-            //end of instruction, if statement is true
-            if (CycleHandler.getInstance().getCurrentCycle() == 11 + CycleHandler.getInstance().getInstructionStartCycle())
-                CycleHandler.getInstance().setCurrentCycle(10);
+            }
         }
         drawActiveElements();
         activeOperationsExecutePhase();

@@ -5,8 +5,6 @@ import project.model.processor.InternalBus;
 
 public final class LIR extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final LIR LIR = new LIR();
 
     public static LIR getInstance() {

@@ -5,8 +5,6 @@ import project.model.processor.Accumulator;
 
 public final class SHR extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final SHR INC = new SHR();
 
     public static SHR getInstance() {

@@ -12,17 +12,13 @@ public final class ConditionChecker extends BaseComponent {
     }
 
     public boolean checkAccumulator() {
-        boolean isZero = false;
-
         String accumulatorValue = Accumulator.getInstance().getValue();
 
         for (int i = 0; i < accumulatorValue.length(); i++) {
-            if (!(accumulatorValue.charAt(i) == '0')) {
-                isZero = false;
-                return isZero;
+            if (accumulatorValue.charAt(i) != '0') {
+                return false;
             }
         }
-        isZero = true;
-        return isZero;
+        return true;
     }
 }

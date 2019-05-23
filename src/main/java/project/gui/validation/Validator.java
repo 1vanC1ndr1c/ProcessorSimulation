@@ -5,6 +5,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import project.gui.rightSide.UpperRightSide;
+import project.logic.HexHandler;
 import project.model.memory.Memory;
 import project.model.processor.*;
 
@@ -21,7 +22,9 @@ public class Validator {
         for (Map.Entry<String, String> entry : tmpMap.entrySet()) {
             //validate the new data and, if valid, save it into memory
             if (entry.getKey().length() == 6 && entry.getValue().length() == 8) {
-                Memory.getInstance().getLocationAndContent().put(entry.getKey(), entry.getValue());
+                if (HexHandler.checkIfHex(entry.getValue())) {
+                    Memory.getInstance().getLocationAndContent().put(entry.getKey(), entry.getValue());
+                }
             }
         }
         //clear the old data
@@ -89,12 +92,16 @@ public class Validator {
 
     public static void validateInstructionLocation(GridPane gridPane) {
         //check text fields for memory location values
-        //location needs to be a six digit string
+        //value needs to be a six digit string
         //if it isn't, reset it to "000000"
         //if there is no such memory location, reset to default value
         for (Node node : gridPane.getChildren()) {
             if (node.getClass().isInstance(new TextField())) {
                 TextField textField = (TextField) node;
+                if (!HexHandler.checkIfHex(textField.getText())) {
+                    gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
+                    return;
+                }
                 if (textField.getLength() != 6) {
                     gridPane.add(new TextField("000000"), GridPane.getColumnIndex(node), GridPane.getRowIndex(node));
                     return;

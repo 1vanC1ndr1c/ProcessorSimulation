@@ -5,8 +5,6 @@ import project.model.processor.InternalBus;
 
 public final class EA extends BaseSignal {
 
-    Integer noOfCycles = 2;
-
     private static final EA EPC = new EA();
 
     public static EA getInstance() {

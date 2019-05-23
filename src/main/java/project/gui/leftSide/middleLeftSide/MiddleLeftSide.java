@@ -6,16 +6,23 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Cylinder;
 import javafx.scene.text.Text;
+import project.Processor;
 import project.gui.bottom.Bottom;
 import project.gui.leftSide.LeftSide;
+import project.gui.rightSide.LowerRightSide.LowerRightSide;
 import project.logic.ComponentValuesContainer;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.middle.Middle;
 import project.gui.rightSide.UpperRightSide;
 import project.logic.CycleHandler;
+import project.model.memory.Memory;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -29,6 +36,7 @@ public class MiddleLeftSide {
     public static Button prevButton = new Button("Prev.");
     public static Button fetchAndExecuteButton = new Button("Fetch and Execute");
     public static VBox middleLeftSideBox = new VBox();
+    private static Map<String, String> memoryValuesBeforeExecute = new HashMap<>();
 
 
     public static VBox set(BorderPane borderPane) {
@@ -95,7 +103,6 @@ public class MiddleLeftSide {
         if (currCycle < 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             Fetch.getInstance().fetch();
         }
-
         //execute phase
         if (currCycle >= 8 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //if it is decoded correctly, do the execute phase
@@ -108,6 +115,8 @@ public class MiddleLeftSide {
         Bottom.set(borderPane);//draw the results
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
+        LowerRightSide.set();//save the new values into memory
+
 
         CycleHandler.startOfTheInstructions.put(currCycle, CycleHandler.getInstance().getInstructionStartCycle());
 
@@ -120,7 +129,6 @@ public class MiddleLeftSide {
             }
         }
     }
-
 
     private static void buttonPrevOperation(BorderPane borderPane) {
         //remove current values
@@ -153,11 +161,11 @@ public class MiddleLeftSide {
         Bottom.set(borderPane);    //draw the results
         UpperRightSide.loadComponents(UpperRightSide.componentsGridPane);  //update component values
         LowerLeftSide.setActiveOperations();
+        //save the new values into memory
+        LowerRightSide.set();
 
         //move the scrollbar to the correct position
         middleLeftSideBox.layout();
-        middleLeftSideBox.heightProperty().addListener(
-                (ChangeListener) (observable, oldvalue, newValue) -> LeftSide.scrollPane.setVvalue(1d));
-
+        middleLeftSideBox.heightProperty().addListener(e -> LeftSide.scrollPane.setVvalue(1d));
     }
 }

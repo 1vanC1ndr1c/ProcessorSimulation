@@ -7,8 +7,6 @@ import project.model.processor.InternalBus;
 
 public final class ADD extends BaseSignal {
 
-    Integer noOfCycles = 2;
-
     private static final ADD INC = new ADD();
 
     public static ADD getInstance() {

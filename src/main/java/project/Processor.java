@@ -15,6 +15,9 @@ import project.gui.top.Top;
 import static project.logic.CycleHandler.startOfTheInstructions;
 
 public class Processor extends Application {
+
+    public static BorderPane border = new BorderPane();
+
     public static void main(String[] args) {
         MemoryLoader.loadData();
         launch(args);
@@ -27,8 +30,6 @@ public class Processor extends Application {
         startOfTheInstructions.put(0, 0);
 
         primaryStage.setTitle("Processor Simulation Application");
-
-        BorderPane border = new BorderPane();
 
         LeftSide.set(border);
         RightSide.set(border);

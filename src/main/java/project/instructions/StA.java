@@ -2,12 +2,15 @@ package project.instructions;
 
 import lombok.Data;
 import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
+import project.gui.rightSide.LowerRightSide.LowerRightSide;
 import project.logic.CycleHandler;
 import project.gui.middle.Middle;
+import project.model.memory.Memory;
 import project.model.processor.behavior.signals.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Data
 public class StA implements BaseInstruction {
@@ -71,6 +74,7 @@ public class StA implements BaseInstruction {
         if (CycleHandler.getInstance().getCurrentCycle() == 13 + CycleHandler.getInstance().getInstructionStartCycle()) {
             //write
             Middle.fillTheGrid(Middle.middleGroup, "memory", "mdr", "mar");
+            LowerRightSide.set();
         }
     }
 

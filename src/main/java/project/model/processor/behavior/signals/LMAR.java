@@ -5,8 +5,6 @@ import project.model.processor.MemoryAddressRegister;
 
 public class LMAR extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final LMAR LMAR = new LMAR();
 
     public static LMAR getInstance() {

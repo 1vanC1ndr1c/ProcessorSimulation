@@ -132,6 +132,9 @@ public class InstructionEditorSubmitButton {
         if (opCode != "-1" && !value.contains("val")) {
             Memory.getInstance().getLocationAndContent().put(memoryAddress, opCode + value);
         }
+        if (opCode == "50" || opCode == "80") {
+            Memory.getInstance().getLocationAndContent().put(memoryAddress, opCode + "000000");
+        }
     }
 }
 

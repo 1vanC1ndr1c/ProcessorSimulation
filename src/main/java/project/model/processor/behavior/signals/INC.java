@@ -5,8 +5,6 @@ import project.model.processor.ProgramCounter;
 
 public final class INC extends BaseSignal {
 
-    Integer noOfCycles = 1;
-
     private static final INC INC = new INC();
 
     public static INC getInstance() {
