@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import project.data.MemoryLoader;
+import project.model.memory.MemoryLoader;
 import project.gui.bottom.Bottom;
 import project.gui.leftSide.LeftSide;
 import project.gui.middle.Middle;

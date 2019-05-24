@@ -15,10 +15,16 @@ public class Top {
         topBox.setStyle("-fx-border-color: black");
         topBox.prefHeightProperty().bind(borderPane.widthProperty().multiply(0.01));
 
-        Button button = new Button("Instruction Editor");
-        button.setOnAction(e -> new InstructionEditor().setEditorWindow());
+        Button buttonInstructionEditor = new Button("Instruction Editor");
+        buttonInstructionEditor.setOnAction(e -> new InstructionEditor().setEditorWindow());
 
-        topBox.getChildren().addAll(button, new Text(" "), InstructionOpCodes.setInstructionList());
+        Button resetButton = ResetButton.set();
+
+        topBox.getChildren().addAll(buttonInstructionEditor, new Text(" "),
+                InstructionOpCodes.setInstructionList(),
+                InstructionEditor.createSpacer(),
+                resetButton,
+                InstructionEditor.createSpacer());
 
         borderPane.setTop(topBox);
     }

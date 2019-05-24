@@ -1,14 +1,11 @@
 package project.gui.leftSide.middleLeftSide;
 
-import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Cylinder;
 import javafx.scene.text.Text;
-import project.Processor;
 import project.gui.bottom.Bottom;
 import project.gui.leftSide.LeftSide;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
@@ -17,13 +14,8 @@ import project.gui.leftSide.lowerLeftSide.LowerLeftSide;
 import project.gui.middle.Middle;
 import project.gui.rightSide.UpperRightSide;
 import project.logic.CycleHandler;
-import project.model.memory.Memory;
 import project.model.processor.behavior.Execute;
 import project.model.processor.behavior.Fetch;
-
-import java.util.HashMap;
-import java.util.Map;
-
 
 /**
  * Class that is used to draw the 'next' and 'prev' buttons into gui.
@@ -36,7 +28,6 @@ public class MiddleLeftSide {
     public static Button prevButton = new Button("Prev.");
     public static Button fetchAndExecuteButton = new Button("Fetch and Execute");
     public static VBox middleLeftSideBox = new VBox();
-    private static Map<String, String> memoryValuesBeforeExecute = new HashMap<>();
 
 
     public static VBox set(BorderPane borderPane) {
@@ -130,7 +121,7 @@ public class MiddleLeftSide {
         }
     }
 
-    private static void buttonPrevOperation(BorderPane borderPane) {
+    public static void buttonPrevOperation(BorderPane borderPane) {
         //remove current values
         if (CycleHandler.getInstance().getCurrentCycle() > 1) {
             ComponentValuesContainer.getInstance().removeCurrentComponentValues();

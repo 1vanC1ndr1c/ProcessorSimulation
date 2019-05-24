@@ -1,4 +1,4 @@
-package project.data;
+package project.model.memory;
 
 import lombok.Data;
 import project.model.memory.Memory;

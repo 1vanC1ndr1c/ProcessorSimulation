@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public final class Jmp implements BaseInstruction {
 
-    Integer noOfCycles = 8;
+    Integer noOfCycles = 9;
 
     private static final Jmp JMP = new Jmp();
 
