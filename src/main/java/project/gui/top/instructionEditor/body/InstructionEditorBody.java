@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import project.gui.top.instructionEditor.InstructionEditor;
+import project.gui.top.Spacer;
 import project.logic.HexHandler;
 
 public class InstructionEditorBody {
@@ -66,9 +66,9 @@ public class InstructionEditorBody {
 
         editorLine.getChildren().addAll(
                 memoryLocation,
-                InstructionEditor.createSpacer(), instructions,
-                InstructionEditor.createSpacer(), dollarSignContainer, value,
-                InstructionEditor.createSpacer());
+                Spacer.createSpacer(), instructions,
+                Spacer.createSpacer(), dollarSignContainer, value,
+                Spacer.createSpacer());
 
         return editorLine;
     }

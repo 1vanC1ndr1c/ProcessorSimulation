@@ -14,6 +14,7 @@ public class ResetButton {
 
     public static Button set() {
         Button resetButton = new Button("Reset");
+        resetButton.setStyle("-fx-background-color: green");
         resetButton.setOnAction(e -> {
             while (CycleHandler.getInstance().getCurrentCycle() > 0) {
                 MiddleLeftSide.buttonPrevOperation(Processor.border);

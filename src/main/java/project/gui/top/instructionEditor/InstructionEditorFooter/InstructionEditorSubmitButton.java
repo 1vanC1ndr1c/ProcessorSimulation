@@ -9,7 +9,7 @@ import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import project.gui.leftSide.middleLeftSide.MiddleLeftSide;
 import project.gui.rightSide.LowerRightSide.LowerRightSide;
-import project.gui.top.instructionEditor.InstructionEditor;
+import project.gui.top.Spacer;
 import project.gui.top.instructionEditor.InstructionValidation;
 import project.gui.top.instructionEditor.body.InstructionEditorBody;
 import project.model.memory.Memory;
@@ -39,9 +39,9 @@ public class InstructionEditorSubmitButton {
 
         HBox buttonContainer = new HBox();
         buttonContainer.getChildren().addAll(
-                InstructionEditor.createSpacer(),
+                Spacer.createSpacer(),
                 editorSubmitButton,
-                InstructionEditor.createSpacer());
+                Spacer.createSpacer());
         //=============================================================================================================
 
         return buttonContainer;

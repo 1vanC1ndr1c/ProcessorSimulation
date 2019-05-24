@@ -22,9 +22,9 @@ public class Top {
 
         topBox.getChildren().addAll(buttonInstructionEditor, new Text(" "),
                 InstructionOpCodes.setInstructionList(),
-                InstructionEditor.createSpacer(),
+                new Text("   "),
                 resetButton,
-                InstructionEditor.createSpacer());
+                Spacer.createSpacer());
 
         borderPane.setTop(topBox);
     }

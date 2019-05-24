@@ -2,6 +2,7 @@ package project.gui.top.instructionEditor;
 
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import project.gui.top.Spacer;
 
 class InstructionEditorHeader {
 
@@ -15,9 +16,9 @@ class InstructionEditorHeader {
         value.setStyle("-fx-border-color: black");
 
         HBox header = new HBox();
-        header.getChildren().addAll(memoryLocation, InstructionEditor.createSpacer(),
-                instruction, InstructionEditor.createSpacer(),
-                value, InstructionEditor.createSpacer());
+        header.getChildren().addAll(memoryLocation, Spacer.createSpacer(),
+                instruction, Spacer.createSpacer(),
+                value, Spacer.createSpacer());
         header.setStyle("-fx-border-color: black");
 
         return header;
